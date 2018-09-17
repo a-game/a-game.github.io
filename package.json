@@ -1,0 +1,26 @@
+{
+    "name": "ahmadgame.com",
+    "version": "0.1.0",
+    "description": "Ahmad Game personal website.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/a-game/a-game.github.io.git"
+    },
+    "homepage": "https://ahmadgame.com",
+    "author": {
+        "name": "Ahmad Game",
+        "email": "me@ahmadgame.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.0",
+        "node-sass": "^4.9.3"
+    },
+    "scripts": {
+        "js": "babel src/js/main.js --out-file assets/main.js",
+        "css": "node-sass src/sass/main.scss -o assets",
+        "css:watch": "node-sass src/sass/main.scss -wo assets",
+        "build": "npm run js && npm run css"
+    }
+}
