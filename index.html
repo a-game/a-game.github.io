@@ -10,7 +10,6 @@
 </head>
 
 <body id="page-top">
-
     <header id="home" class="header">
         <h1>Hero header</h1>
         <h3>Subheader text goes here :)</h3>
@@ -23,143 +22,114 @@
         <span class="bar third"></span>
         <div class="nav-menu">
             <a class="nav-menu-item" href="#profile">Who I am</a>
-            <a class="nav-menu-item" href="#services">What I do</a>
-            <a class="nav-menu-item" href="#resume">About</a>
+            <a class="nav-menu-item" href="#work">What I do</a>
+            <a class="nav-menu-item" href="#experience">Experience</a>
             <a class="nav-menu-item" href="#contact">Contact</a>
+            <a class="nav-menu-item" href="./blog/index.html">My thoughts</a>
         </div>
     </div>
 
-    <section id="profile" class="section">
-        <div class="">
-            <div class="">
-                <div class="">
-                    <div class="">
-                        <img src="assets/images/profile-picture.jpg" alt="profile picture" class="" />
-                    </div>
+    <section id="profile" class="section bg-1">
+        <div class="container">
+            <div class="flex-grid">
+                <div class="column picture-column">
+                    <img class="picture" src="assets/img/profile.png" alt="profile picture" />
+                </div>
+                <div class="column">
+                    <h2 class="column-header">Hi, My Name is Ahmad Game</h2>
+                    <p class="column-subheader">
+                        I'm a curious and observant fellow, who likes to solve problems and figure out how things
+                        really work.
+                    </p>
 
-                    <div class="">
-                        <h2 class="">Hi, My Name is Ahmad Game</h2>
-                        <p>
-                            I'm a curious and observant fellow, who likes to solve problems and figure out how things
-                            really work.
-                        </p>
+                    <span class="divider"></span>
 
-                        <span class="divider"></span>
+                    <p class="column-text">
+                        I'm a <span id="age"></span> year old dude living Malmö, Sweden, where I was
+                            born and spent the first nine years of my life. At the age of nine I moved to Cairo with my
+                            dad, where I spent another nine years in a metropolis that never sleeps.
+                    </p>
 
-                        <p class="">
-                            <span>I'm a </span><span id="age"></span><span> year old dude living Malmö, Sweden, where I was
-                                born and spent the first nine years of my life. At the age of nine I moved to Cairo with my
-                                dad, where I spent another nine years in a metropolis that never sleeps.</span>
-                        </p>
+                    <p class="column-text">
+                        Growing up in such a huge city taught me alot about diplomacy and handeling people, because you
+                        are surrounded by them all the time.
+                        Another important feature I've gained from my years in Cairo is coping with stress and a life
+                        of fast pace.
+                    </p>
 
-                        <p class="">
-                            Growing up in such a huge city taught me alot about diplomacy and handeling people, because you
-                            are surrounded by them all the time.
-                            Another important feature I've gained from my years in Cairo is coping with stress and a life
-                            of fast pace.
-                        </p>
+                    <p class="column-text">
+                        When I turned eighteen I decided to move back to Sweden in order to continue my
+                        education.
+                        I had a slight problem however, I didn't really know what I wanted to do.
+                    </p>
+                    <p class="column-text">
+                        I have two passions in life, solving problems and understanding how things tick.
+                        At a young age I used to take my dad's old gadgets, take them apart and try to draw up diagrams
+                        of how then were constructed and why it behaves in a certain way when you press one button or
+                        another.
+                        This led me to the realization that I wanted to do something technical, probably something with
+                        computers which I found particularly fascinating. I've always been good with people though so I
+                        really wanted to have some social aspect to my line of work.
+                    </p>
 
-                        <p class="">When I turned eighteen I decided to move back to Sweden in order to continue my
-                            education.
-                            I had a slight problem however, I didn't really know what I wanted to do.
-                        </p>
-                        <p class="">
-                            I have two passions in life, solving problems and understanding how things tick.
-                            At a young age I used to take my dad's old gadgets, take them apart and try to draw up diagrams
-                            of how then were constructed and why it behaves in a certain way when you press one button or
-                            another.
-                            This led me to the realization that I wanted to do something technical, probably something with
-                            computers which I found particularly fascinating. I've always been good with people though so I
-                            really wanted to have some social aspect to my line of work.
-                        </p>
+                    <p class="column-text">In 2008 my search was put to rest as I found a great program at Lund University that to
+                        combines the technical and social aspects of computer science.
+                        I immediately applied, got accepted and graduated in 2011.
+                    </p>
 
-                        <p class="">In 2008 my search was put to rest as I found a great program at Lund University that to
-                            combines the technical and social aspects of computer science.
-                            I immediately applied, got accepted and graduated in 2011.
-                        </p>
-
-                        <p class="">I'm a guy with many interests, and a very particular taste in movies, so I always have
-                            a lot going on.
-                            My interests include running, gaming, sketching and talking to complete strangers. If you're
-                            ever sitting next to me on the buss, don't hesitate to say Hi!
-                        </p>
-                    </div>
-
+                    <p class="column-text">I'm a guy with many interests, and a very particular taste in movies, so I always have
+                        a lot going on.
+                        My interests include running, gaming, sketching and talking to complete strangers. If you're
+                        ever sitting next to me on the buss, don't hesitate to say Hi!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="section bg-2">
+        <div class="container">
+            <h2 class="text-center">What I Do</h2>
+            <div class="flex-grid">
+                <div class="column">
+                    <i class="icon-Coding"></i>
+                    <h4 class="column-header">Developer</h4>
+                    <p class="column-text">
+                        I am a developer at heart. This is where I started out and I'll always have a passion for it.
+                    </p>
+                    <p class="column-text">
+                        For me, software development is about solving problems in an innovative and creative way, which is
+                        awesome!
+                    </p>
+                </div>
+                <div class="column">
+                    <i class="icon-Monitor-Analytics"></i>
+                    <h4 class="column-header">Product Owner</h4>
+                    <p class="column-text">
+                        The user perspective and the business side of software development is something that I find very
+                        exciting.
+                    </p>
+                    <p class="column-text">
+                        Tackling the human needs and the real life problems, we set out so solve is a real challenge.
+                    </p>
+                </div>
+                <div class="column">
+                    <i class="icon-Speach-Bubble3"></i>
+                    <h4 class="column-header">Diplomat</h4>
+                    <p class="column-text">
+                        I've always been described as a great communicator. Which is quite useful when trying to explain
+                        complex software and getting people with different personalities to work together for a common goal.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="experience" class="section bg-1">
         <div class="container section-wrapper">
             <div class="section-content">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title">What I Do</h2>
-
-                        <p class="section-subtitle">
-                            I love what I do. I take great pride in what I do. I can't do something halfway.
-                        </p>
-
-                        <span class="divider center"></span>
-                    </div>
-                </div>
-
-                <div class="services">
-                    <div class="row">
-                        <div class="col-sm-4 item top dark-bg match-height">
-                            <div class="inner-content">
-                                <i class="icon-Coding colored-text"></i>
-
-                                <h4>Developer</h4>
-
-                                <p class="text-grey">
-                                    I am a developer at heart. This is where I started out and I'll always have a passion for it.
-                                </p>
-                                <p class="text-grey">
-                                    For me, software development is about solving problems in an innovative and creative way, which is awesome!
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 item top match-height">
-                            <div class="inner-content">
-                                <i class="icon-Monitor-Analytics colored-text"></i>
-
-                                <h4>Product Owner</h4>
-
-                                <p class="text-grey">
-                                    The user perspective and the business side of software development is something that I find very exciting.
-                                </p>
-                                <p class="text-grey">
-                                    Tackling the human needs and the real life problems, we set out so solve is a real challenge.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 item top dark-bg match-height">
-                            <div class="inner-content">
-                                <i class="icon-Speach-Bubble3 colored-text"></i>
-
-                                <h4>Diplomat</h4>
-
-                                <p class="text-grey">
-                                    I've always been described as a great communicator. Which is quite useful when trying to explain complex software and getting people with different personalities to work together for a common goal.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <h2 class="section-title">My Resume</h2>
+                        <h2 class="section-title">Experience</h2>
 
                         <p class="section-subtitle">
                             If you call failures experiments, you can put them in your resume and claim them as achievements.
@@ -172,7 +142,7 @@
                 <div class="row education">
                     <div class="col-md-10 col-md-offset-1">
                         <h3>
-                            My Education
+                            Education
                             <br>
                             2008 - 2011
                         </h3>
@@ -213,7 +183,7 @@
                 <div class="row work-experience">
                     <div class="col-md-10 col-md-offset-1">
                         <h3>
-                            Work Experience
+                            Work
                             <br>
                             2010 - Now
                         </h3>
@@ -402,10 +372,10 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container section-wrapper">
-            <div class="section-content">
-                <div class="row">
+    <section id="contact" class="section bg-2">
+        <div class="">
+            <div class="">
+                <div class="">
                     <div class="col-md-12 text-center">
                         <h2 class="section-title">Contact Me</h2>
 
@@ -456,9 +426,7 @@
     </section>
 
     <footer>
-        <div class="">
-            <p class="">&copy; 2016 Ahmad Game. All rights reserved.</p>
-        </div>
+        <p class="text-center">&copy; <span id="thisYear"></span> Ahmad Game. All rights reserved.</p>
     </footer>
     <script src="assets/main.js"></script>
 </body>
