@@ -11,8 +11,8 @@ $secondary: #4e598c;
 $secondary-dark: #20305e;
 $secondary-light: #7d86bc;
 
-$background1: #e1e2e1;
-$background2: #f5f5f6;
+$background1: #f5f5f6;
+$background2: #e1e2e1;
 
 .bg-1 {
   background-color: $background1;
@@ -75,7 +75,7 @@ a {
   align-items: center;
   justify-content: center;
   height: calc(100vh - (#{$nav-height} + .1rem));
-  background-image: url(../assets/img/bg-header.png);
+  background-image: url('../img/bg-header.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -147,7 +147,6 @@ a {
       width: 2.9rem;
       height: .4rem;
       margin-bottom: .5rem;
-      margin-left: .9rem;
       background-color: $secondary;
       border-radius: .3rem;
       z-index: 1;
@@ -166,7 +165,8 @@ a {
 
     > #nav-check {
       position: absolute;
-      top: 0px;
+      top: 0;
+      left: 0;
       height: 100%;
       width: $nav-height;
       display: block;
