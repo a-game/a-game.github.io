@@ -1,6 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+
+const posts = ['index', 'test'];
+const createBlogPage = (post) => new HtmlWebpackPlugin({
+  template: path.join(__dirname, 'src', 'blog', 'template.html'),
+  hash: true,
+  filename: path.join(__dirname, 'blog', `${post}.html`)
+});
 
 module.exports = {
   mode: devMode ? 'development' : 'production',
@@ -55,10 +63,16 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-    })
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'index.html'),
+      hash: true,
+      filename: path.resolve(__dirname, 'index.html')
+    }),
+    // Spread the returned HtmlWebpackPlugin config
+    // objects into the plugins array.
+    ...posts.map(p => createBlogPage(p))
   ],
 };

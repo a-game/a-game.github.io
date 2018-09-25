@@ -163,7 +163,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _img_profile_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/profile.png */ "./src/img/profile.png");
 /* harmony import */ var _img_profile_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_profile_png__WEBPACK_IMPORTED_MODULE_2__);
 
- // import './img/bg-header.png'
 
 
 
