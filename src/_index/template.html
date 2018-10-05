@@ -1,0 +1,35 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Ahmad Game's personal website">
+  <meta name="keywords" content="ahmad, game, resume, description, about, blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ahmad Game</title>
+</head>
+
+<body id="page-top">
+  <%= require('html-loader!../partials/nav.html') %>
+  <%= require('html-loader!../partials/progress.html') %>
+  <div class="content index">
+
+    <header id="home" class="header">
+      <h1>Hi, my name is Game!</h1>
+      <div class="">
+        <p class="text-center">
+          Game is my actual last name.
+          <br />
+          I'm not too fond of the book or the rapper.
+          <br />
+          The film however is pretty good ;)
+        </p>
+
+        <%= require('html-loader!../partials/contact.html') %>
+      </div>
+    </header>
+
+  </div>
+</body>
+
+</html>

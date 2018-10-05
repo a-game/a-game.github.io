@@ -1,0 +1,34 @@
+@import '../sass/style.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - (#{$nav-height}));
+  background-image: url('../img/bg-header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  padding: 10rem 1.5rem;
+
+  @media (max-width: $tablet) {
+    height: 100vh;
+  }
+
+  .contact {
+    margin-top: 6rem;
+  }
+}
+
+body {
+  background-color: $primary;
+}
+
+.content {
+  &.index {
+    max-width: 100vw;
+    padding: 0;
+  }
+}

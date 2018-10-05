@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My thoughts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../assets/main.css?4449c03807df1e373e31" rel="stylesheet"></head>
-<body>
-    <h1>Hello World</h1>
-    <ul>
-        <li>How I made this</li>
-        <li>Postcss loader default config</li>
-        <li>Product + dev</li>
-    </ul>
-<script type="text/javascript" src="../assets/bundle.js?4449c03807df1e373e31"></script></body>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    test
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/blog.css?fb624febcef07227b91e" rel="stylesheet"></head>
+
+<body id="page-top">
+  <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <span class="bar first"></span>
+  <span class="bar second"></span>
+  <span class="bar third"></span>
+  <div class="nav-menu">
+    <a class="nav-menu-item" href="/">Home</a>
+    <a class="nav-menu-item" href="/bio/">Who I am</a>
+    <a class="nav-menu-item" href="/experience/">What I do</a>
+    <a class="nav-menu-item" href="/blog/">Stuff I think about</a>
+  </div>
+</div>
+  <div class="progress-bar"></div>
+  <div class="content">
+    <p>Just a test</p>
+
+  </div>
+
+  <!-- This is a "hack" for nesting partials
+  https://stackoverflow.com/questions/49168671/webpack-include-html-partial-inside-another-partial
+  -->
+  <footer> <div class=footer-content> <div class="contact">
+    <a href="https://github.com/a-game" target="blank">
+        <svg class="icon-github-square">
+            <use xlink:href="../assets/img/icons.svg#icon-github-square"></use>
+        </svg>
+    </a>
+    <a href="https://github.com/a-game" target="blank">
+        <svg class="icon-linkedin-square">
+            <use xlink:href="../assets/img/icons.svg#icon-linkedin-square"></use>
+        </svg>
+    </a>
+    <a href="mailto:me@ahmadgame.com" target="blank">
+        <svg class="icon-envelope">
+            <use xlink:href="../assets/img/icons.svg#icon-envelope"></use>
+        </svg>
+    </a>
+</div> <div class=copyright>&copy; <span id=thisYear></span> Ahmad Game. All rights reserved.</div> </div> </footer>
+<script type="text/javascript" src="../assets/blog.js?fb624febcef07227b91e"></script></body>
+
 </html>

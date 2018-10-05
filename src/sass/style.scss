@@ -1,42 +1,9 @@
-// colors
-$white: #ffffff;
-$gray: #adadad;
-$black: #404040;
-
-$primary: #333333;
-$primary-dark:#0c0c0c;
-$primary-light: #5c5c5c;
-
-$secondary: #4e598c;
-$secondary-dark: #20305e;
-$secondary-light: #7d86bc;
-
-$background1: #f5f5f6;
-$background2: #e1e2e1;
-
-.bg-1 {
-  background-color: $background1;
-}
-
-.bg-2 {
-  background-color: $background2;
-}
-
-// variables
-$nav-height: 6rem;
-
-// Screens & containers
-$phone: 576px;
-$phone-container-width: 540px;
-
-$tablet: 768px;
-$tablet-container-width: 720px;
-
-$medium: 992px; // small laptops or portrait tablets.
-$medium-container-width: 960px;
-
-$large: 1200px;
-$large-container-width: 1140px;
+@import 'colors';
+@import 'screens';
+@import 'nav';
+@import 'footer';
+@import 'progress';
+@import 'fonts';
 
 * {
   box-sizing: border-box;
@@ -51,46 +18,42 @@ body {
   margin: 0;
   outline: 0;
   padding: 0;
-  font-style: inherit;
-  font-weight: inherit;
   overflow-x: hidden;
+  background-color: $background;
+
   color: $black;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  background-color: $background2;
+  @extend %bodyFont;
 }
 
 a {
   text-decoration: none;
   color: $secondary;
   transition: color 0.3s ease;
+
   &:hover {
-      color: $secondary-light;
+    color: $secondary-light;
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - (#{$nav-height} + .1rem));
-  background-image: url('../img/bg-header.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: $gray;
-
-  @media (max-width: $tablet) {
-    height: 100vh;
-  }
+hr {
+  // dividers
+  margin: 5rem auto;
+  background-color: $secondary-dark;
+  border-radius: .3rem;
 }
 
-.header, .section {
-  padding: 10rem 1.5rem;
+pre {
+  padding: 1.6rem;
+  overflow: auto;
+  background-color: $background-code;
+  border: 0.1rem solid $gray;
+  border-radius: .3rem;
+  @extend %codeFont;
 }
 
-.container {
+.content {
+  min-height: calc(100vh - #{$nav-height});
+  padding: 10rem 4rem;
   margin: auto;
   max-width: $large-container-width;
 
@@ -105,131 +68,8 @@ a {
   }
 }
 
-.nav {
-  height: $nav-height;
-  width: 100%;
-  background-color: $primary;
-  position: sticky;
-  top: 0;
-  padding: 0 2rem;
-  box-shadow: 0 0.2rem 0.1rem 0 rgba(0,0,0,.2);
-
-  .bar,
-  #nav-check {
-    display: none;
-  }
-
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-
-    > a {
-      color: $gray;
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-}
-
-@media (max-width: $tablet) {
-  .nav {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    > .bar {
-      display: block;
-      position: relative;
-      width: 2.9rem;
-      height: .4rem;
-      margin-bottom: .5rem;
-      background-color: $secondary;
-      border-radius: .3rem;
-      z-index: 1;
-
-      transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-                  opacity 0.33s ease;
-    }
-
-    > .bar.first {
-      transform-origin: 0% 0%;
-    }
-
-    > .bar.third {
-      transform-origin: 0% 100%;
-    }
-
-    > #nav-check {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: $nav-height;
-      display: block;
-      cursor: pointer;
-      margin: 0; // override checkbox default
-      opacity: 0; // hide this
-      z-index: 2; // and place it over the hamburger
-
-      &:checked {
-        // Expand the menu
-        ~ .nav-menu {
-          height: auto;
-          padding-top: 0;
-          padding-right: 2rem;
-          padding-bottom: 2rem;
-          padding-left: 2rem;
-          overflow-y: none;
-
-          max-height: 500px;
-          transition: max-height 0.3s ease-in;
-        }
-
-        // Transform all the slices of hamburger
-        // into a crossmark.
-        ~ .bar.first {
-          transform: rotate(45deg) translate(-.2rem, -.1rem);
-        }
-
-        // But let's hide the middle one.
-        ~ .bar.second {
-          opacity: 0;
-          transform: rotate(0deg) scale(0.2, 0.2);
-        }
-
-        // Ohyeah and the last one should go the other direction
-        ~ .bar.third {
-          transform: rotate(-45deg) translate(0, -.1rem);
-        }
-      }
-
-      &:not(:checked) ~ .nav-menu {
-        max-height: 0;
-      }
-    }
-
-    > .nav-menu {
-      position: absolute;
-      top: $nav-height;
-      left: 0px;
-      width: 100%;
-      flex-direction: column;
-      justify-content: flex-start;
-      background-color: $primary;
-      overflow-y: hidden;
-
-      > .nav-menu-item {
-        width: 100%;
-        height: 4rem;
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
+.section:not(:first-child) {
+  padding-top: 10rem;
 }
 
 .text-center {
@@ -253,12 +93,3 @@ a {
   }
 }
 
-#profile {
-  .picture-column {
-    padding: 3rem;
-
-    .picture {
-      width: 100%;
-    }
-  }
-}

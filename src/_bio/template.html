@@ -1,0 +1,78 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Ahmad Game's personal website">
+  <meta name="keywords" content="ahmad, game, resume, description, about, blog">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ahmad Game</title>
+</head>
+
+<body id="page-top">
+  <%= require('html-loader!../partials/nav.html') %>
+  <%= require('html-loader!../partials/progress.html') %>
+  <div class="content">
+
+    <section id="profile" class="section">
+      <div class="container">
+        <div class="flex-grid">
+          <div class="column picture-column">
+            <img class="picture" src="../assets/img/Game.png" alt="profile picture" />
+          </div>
+          <div class="column">
+            <h2 class="column-header">Hi, My Name is Ahmad Game</h2>
+            <p class="column-subheader">
+              I'm a curious and observant fellow, who likes to solve problems and figure out how things
+              really work.
+            </p>
+
+            <span class="divider"></span>
+
+            <p class="column-text">
+              I'm a <span id="age"></span> year old dude living Malmö, Sweden, where I was
+              born and spent the first nine years of my life. At the age of nine I moved to Cairo with my
+              dad, where I spent another nine years in a metropolis that never sleeps.
+            </p>
+
+            <p class="column-text">
+              Growing up in such a huge city taught me a lot about diplomacy and handling people, because you
+              are surrounded by them all the time.
+              Another important feature I've gained from my years in Cairo is coping with stress and a life
+              of fast pace.
+            </p>
+
+            <p class="column-text">
+              When I turned eighteen I decided to move back to Sweden in order to continue my
+              education.
+              I had a slight problem however, I didn't really know what I wanted to do.
+            </p>
+            <p class="column-text">
+              I have two passions in life, solving problems and understanding how things tick.
+              At a young age I used to take my dad's old gadgets, take them apart and try to draw up diagrams
+              of how then were constructed and why it behaves in a certain way when you press one button or
+              another.
+              This led me to the realization that I wanted to do something technical, probably something with
+              computers which I found particularly fascinating. I've always been good with people though so I
+              really wanted to have some social aspect to my line of work.
+            </p>
+
+            <p class="column-text">I'm a guy with many interests, and a very particular taste in movies, so I always
+              have
+              a lot going on.
+              My interests include running, gaming, sketching and talking to complete strangers. If you're
+              ever sitting next to me on the buss, don't hesitate to say Hi!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- This is a "hack" for nesting partials
+  https://stackoverflow.com/questions/49168671/webpack-include-html-partial-inside-another-partial
+  -->
+  <%= require('html-loader?root=.&minimize=true&interpolate=require!../partials/footer.html') %>
+</body>
+
+</html>

@@ -1,35 +1,45 @@
-// The whole document (HTML) has been loaded.
-// Excluding images, js, and css
-document.addEventListener('DOMContentLoaded', function () {
-    addSmoothScrolling();
-    setAge();
-    setCopyRightYear();
-});
+export default function init(onContentLoadedFuncs = [], onLoadFuncs = []) {
+    const todoCount = onContentLoadedFuncs.length + onLoadFuncs.length;
+    let doneCount = 0;
 
-document.addEventListener('load', function() {
-    // remove loader.
-})
+    // The whole document (HTML) has been loaded.
+    // Excluding images, js, and css
+    document.addEventListener('DOMContentLoaded', () => {
+        // init the progress bar.
+        setProgress(0);
+        document.querySelector(".content").style.visibility = "hidden";
+        // document.querySelector(".content").style.opacity = 0;
 
-function addSmoothScrolling() {
-    // Add listener for all anchor links
-    // for smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        onContentLoadedFuncs.forEach(f => {
+            f();
+            setProgress(doneCount++ / todoCount * 100);
         });
     });
+
+    window.onload = () => {
+        onLoadFuncs.forEach(f => {
+            f();
+            setProgress(doneCount++ / todoCount * 100);
+        });
+
+        // Just set the progress to 100%
+        // if there is nothing else to do.
+        if (!onLoadFuncs.length) {
+            setProgress(100);
+        }
+        document.querySelector(".content").style.visibility = "visible";
+        // document.querySelector(".content").style.opacity = 1;
+    };
 };
 
-function setAge() {
-    var ageDifMs = Date.now() - new Date(1985, 6, 26).getTime();
-    var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    document.getElementById('age').textContent = Math.abs(ageDate.getUTCFullYear() - 1970);
-};
+function setProgress(percent) {
+    let bar = document.querySelector('.progress-bar');
+    if (!bar) {
+        return;
+    }
+    bar.style.minWidth = `${percent}%`;
 
-function setCopyRightYear() {
-    document.getElementById('thisYear').textContent = new Date().getFullYear();
-};
+    if (percent === 100) {
+        bar.classList.add("done");
+    }
+}

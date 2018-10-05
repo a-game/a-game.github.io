@@ -1,17 +1,127 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My thoughts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="../assets/main.css?4449c03807df1e373e31" rel="stylesheet"></head>
-<body>
-    <h1>Hello World</h1>
-    <ul>
-        <li>How I made this</li>
-        <li>Postcss loader default config</li>
-        <li>Product + dev</li>
-    </ul>
-<script type="text/javascript" src="../assets/bundle.js?4449c03807df1e373e31"></script></body>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    My thoughts
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../assets/blog.css?fb624febcef07227b91e" rel="stylesheet"></head>
+
+<body id="page-top">
+  <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <span class="bar first"></span>
+  <span class="bar second"></span>
+  <span class="bar third"></span>
+  <div class="nav-menu">
+    <a class="nav-menu-item" href="/">Home</a>
+    <a class="nav-menu-item" href="/bio/">Who I am</a>
+    <a class="nav-menu-item" href="/experience/">What I do</a>
+    <a class="nav-menu-item" href="/blog/">Stuff I think about</a>
+  </div>
+</div>
+  <div class="progress-bar"></div>
+  <div class="content">
+    <h1 id="hello-world">Hello World</h1>
+<h2 id="hello-world-2">Hello World 2</h2>
+<h3 id="hello-world-3">Hello World 3</h3>
+<h4 id="hello-world-4">Hello World 4</h4>
+<h5 id="hello-world-5">Hello World 5</h5>
+<h6 id="hello-world-6">Hello World 6</h6>
+<p>here is a list:</p>
+<ul>
+<li>How I made this<ul>
+<li>sub</li>
+</ul>
+</li>
+<li>Postcss loader default config</li>
+<li>Product + dev</li>
+</ul>
+<hr>
+<pre><code class="lang-Javascript">  <span class="hljs-attribute">devServer</span>: {
+    <span class="hljs-attribute">publicPath</span>: path.resolve(__dirname, <span class="hljs-string">'assets'</span>), <span class="hljs-comment">// bundle.js</span>
+    <span class="hljs-attribute">contentBase</span>: path.resolve(__dirname), <span class="hljs-comment">// index.html</span>
+    <span class="hljs-attribute">watchContentBase</span>: false,
+    <span class="hljs-attribute">compress</span>: true,
+    <span class="hljs-attribute">port</span>: <span class="hljs-number">8080</span>
+  },
+
+  <span class="hljs-comment">// Spread the returned HtmlWebpackPlugin config</span>
+  <span class="hljs-comment">// objects into the plugins array.</span>
+  ..<span class="hljs-selector-class">.posts</span><span class="hljs-selector-class">.map</span>(post =&gt; createBlogPage(post))
+</code></pre>
+<pre><code class="lang-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'colors'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'screens'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'nav'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'footer'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'progress'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'fonts'</span>;
+
+* {
+  <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+
+<span class="hljs-selector-tag">html</span> {
+  <span class="hljs-comment">// Makes 0.1rem be equal to 1px</span>
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">overflow-x</span>: hidden;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$background</span>;
+
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$black</span>;
+  @<span class="hljs-keyword">extend</span> %bodyFont;
+}
+
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$secondary</span>;
+  <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.3s</span> ease;
+
+  &amp;:hover {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$secondary-light</span>;
+  }
+}
+
+<span class="hljs-selector-tag">hr</span> {
+  <span class="hljs-comment">// dividers</span>
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">5rem</span> auto;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$secondary-dark</span>;
+  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">2rem</span>;
+}
+
+</code></pre>
+<p>here is just a paragraph.</p>
+
+  </div>
+
+  <!-- This is a "hack" for nesting partials
+  https://stackoverflow.com/questions/49168671/webpack-include-html-partial-inside-another-partial
+  -->
+  <footer> <div class=footer-content> <div class="contact">
+    <a href="https://github.com/a-game" target="blank">
+        <svg class="icon-github-square">
+            <use xlink:href="../assets/img/icons.svg#icon-github-square"></use>
+        </svg>
+    </a>
+    <a href="https://github.com/a-game" target="blank">
+        <svg class="icon-linkedin-square">
+            <use xlink:href="../assets/img/icons.svg#icon-linkedin-square"></use>
+        </svg>
+    </a>
+    <a href="mailto:me@ahmadgame.com" target="blank">
+        <svg class="icon-envelope">
+            <use xlink:href="../assets/img/icons.svg#icon-envelope"></use>
+        </svg>
+    </a>
+</div> <div class=copyright>&copy; <span id=thisYear></span> Ahmad Game. All rights reserved.</div> </div> </footer>
+<script type="text/javascript" src="../assets/blog.js?fb624febcef07227b91e"></script></body>
+
 </html>

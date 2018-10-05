@@ -1,0 +1,17 @@
+[class^="icon-"],
+[class*=" icon-"] {
+    height: 2.4rem;
+    width: 2.4rem;
+    display: inline-block;
+    fill: currentColor;
+
+    &.small {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+    &.large {
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+}
