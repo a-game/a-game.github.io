@@ -26,6 +26,8 @@ here is a list:
 
 ---
 
+[some link](/blog/test.html)
+
 ```Javascript
   devServer: {
     publicPath: path.resolve(__dirname, 'assets'), // bundle.js
@@ -39,52 +41,5 @@ here is a list:
   // objects into the plugins array.
   ...posts.map(post => createBlogPage(post))
 ```
-
-```scss
-@import 'colors';
-@import 'screens';
-@import 'nav';
-@import 'footer';
-@import 'progress';
-@import 'fonts';
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  // Makes 0.1rem be equal to 1px
-  font-size: 10px;
-}
-
-body {
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: $background;
-
-  color: $black;
-  @extend %bodyFont;
-}
-
-a {
-  text-decoration: none;
-  color: $secondary;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $secondary-light;
-  }
-}
-
-hr {
-  // dividers
-  margin: 5rem auto;
-  background-color: $secondary-dark;
-  border-radius: .2rem;
-}
-
-```
-
+<script src="https://gist.github.com/a-game/4090af6a194aa9c08507997a96590551.js"></script>
 here is just a paragraph.
