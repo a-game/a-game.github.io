@@ -68,8 +68,8 @@ pre {
   }
 }
 
-.section:not(:first-child) {
-  padding-top: 10rem;
+.section:not(:last-child) {
+  margin-bottom: 10rem;
 }
 
 .text-center {

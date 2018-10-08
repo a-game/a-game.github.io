@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -12,15 +13,19 @@
 <body id="page-top">
   <%= require('html-loader!../partials/nav.html') %>
   <%= require('html-loader!../partials/progress.html') %>
-  <div class="content">
+  <div class="content experience">
 
-    <section id="work" class="section bg-1">
+    <section id="work" class="section">
       <div class="container">
-        <h2 class="text-center">What I Do</h2>
+        <h2 class="text-center">What I do</h2>
         <div class="flex-grid">
           <div class="column">
-            <i class="icon-Coding"></i>
-            <h4 class="column-header">Developer</h4>
+            <div class="column-header">
+              <svg class="icon-code color-secondary">
+                <use xlink:href="../assets/img/icons.svg#icon-code"></use>
+              </svg>
+              <h4>Developer</h4>
+            </div>
             <p class="column-text">
               I am a developer at heart. This is where I started out and I'll always have a passion for it.
             </p>
@@ -30,8 +35,12 @@
             </p>
           </div>
           <div class="column">
-            <i class="icon-Monitor-Analytics"></i>
-            <h4 class="column-header">Product Owner</h4>
+            <div class="column-header">
+              <svg class="icon-line-chart color-secondary">
+                <use xlink:href="../assets/img/icons.svg#icon-line-chart"></use>
+              </svg>
+              <h4>Product Owner</h4>
+            </div>
             <p class="column-text">
               The user perspective and the business side of software development is something that I find very
               exciting.
@@ -41,10 +50,14 @@
             </p>
           </div>
           <div class="column">
-            <i class="icon-Speach-Bubble3"></i>
-            <h4 class="column-header">Diplomat</h4>
+            <div class="column-header">
+              <svg class="icon-graduation-cap color-secondary">
+                <use xlink:href="../assets/img/icons.svg#icon-graduation-cap"></use>
+              </svg>
+              <h4>Teacher </h4>
+            </div>
             <p class="column-text">
-              I've always been described as a great communicator. Which is quite useful when trying to explain
+              I've been often described as a good teacher. Which is quite useful when trying to explain
               complex software and getting people with different personalities to work together for a common goal.
             </p>
           </div>
@@ -52,265 +65,33 @@
       </div>
     </section>
 
-    <section id="experience" class="section bg-2">
-      <div class="container section-wrapper">
-        <div class="section-content">
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="text-center">Experience</h2>
+
+        <div class="timeline">
           <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-              <h2 class="section-title">Experience</h2>
-
-              <p class="section-subtitle">
-                If you call failures experiments, you can put them in your resume and claim them as achievements.
-              </p>
-
-              <span class="divider center"></span>
+            <div class="hidden-part"></div>
+            <div class="middle-part">
+              <div class="line--before"></div>
+              <div class="date">2011</div>
+              <div class="line--after"></div>
+            </div>
+            <div class="visible-part">
+              I've been often described as a good teacher. Which is quite useful when trying to explain
+              complex software and getting people with different personalities to work together for a common goal.
             </div>
           </div>
-
-          <div class="row education">
-            <div class="col-md-10 col-md-offset-1">
-              <h3>
-                Education
-                <br>
-                2008 - 2011
-              </h3>
-
-              <div class="panel-group resume" id="education">
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2008 - 2011</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#education1" data-toggle="collapse" data-parent="#education"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Bachelor Degree - Lund University</h4>
-                      </div>
-                    </div>
-
-                    <div id="education1" class="panel-collapse collapse in">
-                      <div class="panel-body text-grey">
-                        <p>
-                          I studied System Development and Informatics, which is a broad, interdisciplinary field,
-                          aiming
-                          to understand, explain and improve information systems and business.
-                        </p>
-                        <p>
-                          Not only was I trained to design and implement information systems in close cooperation with
-                          the customer - I also learned to reflect on the impact that information systems have on
-                          people,
-                          organization and operations.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="row flipped">
+            <div class="hidden-part"></div>
+            <div class="middle-part">
+              <div class="line--before"></div>
+              <div class="date">2011</div>
+              <div class="line--after"></div>
             </div>
-          </div>
-
-          <div class="row work-experience">
-            <div class="col-md-10 col-md-offset-1">
-              <h3>
-                Work
-                <br>
-                2010 - Now
-              </h3>
-
-              <div class="panel-group resume" id="work">
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2015 - Now</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work1" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Product Manager - Lime Technologies</h4>
-                      </div>
-                    </div>
-
-                    <div id="work1" class="panel-collapse collapse in">
-                      <div class="panel-body text-grey">
-                        <p>
-                          In addition to my technical responsibilities for Lime Easy, I am now responsible for the
-                          business side of the product as well.
-                          <br>
-                          I act as the link between the development team and the rest of the world including customers,
-                          internal management and other stakeholders.
-                          <br>
-                          I decide and communicate the vision and strategy for the product internally and externally.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2012 - Now</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work2" class="collapsed" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Technical Lead - Lime Technologies</h4>
-                      </div>
-                    </div>
-
-                    <div id="work2" class="panel-collapse collapse">
-                      <div class="panel-body text-grey">
-                        <p>
-                          As Tech Lead for Lime Easy, it falls to me to take technical decisions regarding platform,
-                          tools and technical roadmap.
-                          <br>
-                          I'm also responsible for the overall architecture, stability and availability of the product.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2011 - Now</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work3" class="collapsed" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Software Developer - Lime Technologies</h4>
-                      </div>
-                    </div>
-
-                    <div id="work3" class="panel-collapse collapse">
-                      <div class="panel-body text-grey">
-                        <p>
-                          As a developer my job is to innovate, create, maintain and improve two of Lime Technologiess
-                          three CRM products, used by thousands of people every day.
-                          <br>
-                          Lime Easy:
-                          <br>
-                          A well-established product on the Swedish market, that has been around for more than 25+
-                          years.
-                          Lime Easy offers a great opportunity for learning how to handle legacy systems while adding
-                          enough innovation to keep the product moving forward.
-                          <br>
-                          Lime Go:
-                          <br>
-                          The Spotify of sales, is a web SaaS platform. Lime Go offers bleeding edge technology and web
-                          architecture.
-                          Together with a brilliant team, we work with big data and machine learning to revolutionize
-                          sales.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2010 - 2011</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work4" class="collapsed" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">IT Student Ambassador - Academic Work</h4>
-                      </div>
-                    </div>
-
-                    <div id="work4" class="panel-collapse collapse">
-                      <div class="panel-body text-grey">
-                        <p>
-                          Responsibilities:
-                          <br>
-                          Informing, helping and directing technical students in the beginning of their carrier, as
-                          well
-                          as helping them to find a starting job that fit their skills and needs.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2010 - 2011</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work5" class="collapsed" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Front-man for the business committee - Lunds Systemvetarförening</h4>
-                      </div>
-                    </div>
-
-                    <div id="work5" class="panel-collapse collapse">
-                      <div class="panel-body text-grey">
-                        <p>
-                          As a member of the student organization I was the link between my fellow system development
-                          students and the business market.
-                          <br>
-                          This implied organizing job fares, lectures from professionals in the field and visits to
-                          leading companies.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="resume-item">
-                  <div class="resume-year">
-                    <span class="resume-year">2010 - 2011</span>
-                  </div>
-
-                  <div class="resume-btn">
-                    <a href="#work6" class="collapsed" data-toggle="collapse" data-parent="#work"></a>
-                  </div>
-
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <div class="panel-title">
-                        <h4 class="resume-title">Programming Assistent and Mentor - Lund University</h4>
-                      </div>
-                    </div>
-
-                    <div id="work6" class="panel-collapse collapse">
-                      <div class="panel-body text-grey">
-                        <p>
-                          Responsibilities:
-                          <br>
-                          Preparing as well as holding lectures and programming labs for other students.
-                          The lectures included Software architecture as well as programming in C#, Java and J2EE
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="visible-part">
+              I've been often described as a good teacher. Which is quite useful when trying to explain
+              complex software and getting people with different personalities to work together for a common goal.
             </div>
           </div>
         </div>

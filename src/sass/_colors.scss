@@ -12,3 +12,11 @@ $secondary-dark: #00779e;
 $secondary-light: #65d8ff;
 
 $background: #f5f5f6;
+
+.color-primary {
+    color: $primary;
+}
+
+.color-secondary {
+    color: $secondary;
+}
