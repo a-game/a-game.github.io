@@ -13,11 +13,13 @@
 <body id="page-top">
   <%= require('html-loader!../partials/nav.html') %>
   <%= require('html-loader!../partials/progress.html') %>
+  <%= require('html-loader!../partials/scrolltop.html') %>
+
   <div class="content experience">
 
     <section id="work" class="section">
       <div class="container">
-        <h2 class="text-center">What I do</h2>
+        <h2 class="text-center section-title">What I do</h2>
         <div class="flex-grid">
           <div class="column">
             <div class="column-header">
@@ -67,31 +69,65 @@
 
     <section id="resume" class="section">
       <div class="container">
-        <h2 class="text-center">Experience</h2>
-
+        <h2 class="text-center section-title">Experience</h2>
         <div class="timeline">
-          <div class="row">
-            <div class="hidden-part"></div>
-            <div class="middle-part">
-              <div class="line--before"></div>
-              <div class="date">2011</div>
-              <div class="line--after"></div>
+          <div class="row just-a-line">
+            <div class="line-part">
+              <div class="line"></div>
             </div>
-            <div class="visible-part">
+            <div class="text-part"></div>
+          </div>
+          <div class="row">
+            <div class="line-part">
+              <div class="date">2015</div>
+              <div class="line"></div>
+            </div>
+            <div class="text-part">
+              <h4>Product manager - Lime Technologies</h4>
+              <p>
+                Lime Go, Lime Easy and Marketing tech
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="line-part">
+              <div class="date">2011</div>
+              <div class="line"></div>
+            </div>
+            <div class="text-part">
+              <h4>Software developer - Lime Technologies</h4>
+              <p>
+                As a developer my job is to innovate, create, maintain and improve two of Lundalogiks three CRM
+                products, used by thousands of people every day.
+              </p>
               I've been often described as a good teacher. Which is quite useful when trying to explain
               complex software and getting people with different personalities to work together for a common goal.
             </div>
           </div>
-          <div class="row flipped">
-            <div class="hidden-part"></div>
-            <div class="middle-part">
-              <div class="line--before"></div>
+          <div class="row">
+            <div class="line-part">
               <div class="date">2011</div>
-              <div class="line--after"></div>
+              <div class="line"></div>
             </div>
-            <div class="visible-part">
-              I've been often described as a good teacher. Which is quite useful when trying to explain
-              complex software and getting people with different personalities to work together for a common goal.
+            <div class="text-part">
+              <h4>BS in Software development - Lund University</h4>
+              <p>
+                The Spotify of sales, is a web SaaS platform. Lime Go offers bleeding edge technology and web
+                architecture. Together with a brilliant team, we work with big data and machine learning to
+                revolutionize sales.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="line-part">
+              <div class="date">2010</div>
+              <div class="line"></div>
+            </div>
+            <div class="text-part">
+              <p>
+                As a developer my job is to innovate, create, maintain and improve two of Lundalogiks three CRM
+                products, used by thousands of people every day.
+              </p>
             </div>
           </div>
         </div>

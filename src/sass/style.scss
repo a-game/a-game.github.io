@@ -4,6 +4,7 @@
 @import 'footer';
 @import 'progress';
 @import 'fonts';
+@import 'scrolltop';
 
 * {
   box-sizing: border-box;
@@ -21,7 +22,7 @@ body {
   overflow-x: hidden;
   background-color: $background;
 
-  color: $black;
+  color: $gray-dark;
   @extend %bodyFont;
 }
 
@@ -31,7 +32,15 @@ a {
   transition: color 0.3s ease;
 
   &:hover {
-    color: $secondary-light;
+    color: $secondary-dark;
+    text-decoration: underline;
+  }
+
+  &.dark-bg {
+    &:hover {
+      color: $secondary-light;
+      text-decoration: none;
+    }
   }
 }
 
@@ -46,34 +55,38 @@ pre {
   padding: 1.6rem;
   overflow: auto;
   background-color: $white;
-  border: 0.1rem solid $gray;
+  border: 0.1rem solid $gray-light;
   border-radius: .3rem;
   @extend %codeFont;
 }
 
 .content {
   min-height: calc(100vh - #{$nav-height});
-  padding: 10rem 4rem;
+  padding: 10rem 1.5rem;
   margin: auto;
-  max-width: $large-container-width;
 
-  @media (max-width: $medium) {
-    max-width: $medium-container-width;
-  }
-  @media (max-width: $tablet) {
+  @media (min-width: $tablet) {
     max-width: $tablet-container-width;
   }
-  @media (max-width: $phone) {
-    max-width: $phone-container-width;
+  @media (min-width: $medium) {
+    max-width: $medium-container-width;
   }
+  @media (min-width: $large) {
+    max-width: $large-container-width;
+  }
+}
+
+
+.text-center {
+  text-align: center;
 }
 
 .section:not(:last-child) {
   margin-bottom: 10rem;
 }
 
-.text-center {
-  text-align: center;
+.section-title {
+  margin-bottom: 4rem;
 }
 
 .flex-grid {

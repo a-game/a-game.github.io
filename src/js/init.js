@@ -1,4 +1,10 @@
+import { smoothScroll, ScrollToTopFade } from './scroll';
+
 export default function init(onContentLoadedFuncs = [], onLoadFuncs = []) {
+    // Add smooth scroll to all pages
+    onContentLoadedFuncs.push(ScrollToTopFade);
+    onLoadFuncs.push(smoothScroll);
+
     const todoCount = onContentLoadedFuncs.length + onLoadFuncs.length;
     let doneCount = 0;
 
@@ -8,18 +14,17 @@ export default function init(onContentLoadedFuncs = [], onLoadFuncs = []) {
         // init the progress bar.
         setProgress(0);
         document.querySelector(".content").style.visibility = "hidden";
-        // document.querySelector(".content").style.opacity = 0;
 
         onContentLoadedFuncs.forEach(f => {
             f();
-            setProgress(doneCount++ / todoCount * 100);
+            setProgress(++doneCount / todoCount * 100);
         });
     });
 
     window.onload = () => {
         onLoadFuncs.forEach(f => {
             f();
-            setProgress(doneCount++ / todoCount * 100);
+            setProgress(++doneCount / todoCount * 100);
         });
 
         // Just set the progress to 100%
@@ -28,7 +33,6 @@ export default function init(onContentLoadedFuncs = [], onLoadFuncs = []) {
             setProgress(100);
         }
         document.querySelector(".content").style.visibility = "visible";
-        // document.querySelector(".content").style.opacity = 1;
     };
 };
 
@@ -42,4 +46,4 @@ function setProgress(percent) {
     if (percent === 100) {
         bar.classList.add("done");
     }
-}
+};

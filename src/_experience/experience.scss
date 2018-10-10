@@ -11,73 +11,49 @@
 
   .timeline {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 80rem;
-    margin: 0 auto;
-  }
-
-  .row {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center
-  }
-
-  .middle-part {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    order: 2;
-    flex-basis: 10rem;
+    max-width: 80rem;
+    margin: auto;
 
-    .line--before,
-    .line--after {
-      border-left: 2px solid $primary;
-    }
-    .line--before {
-      height: 40%;
-    }
-    .line--after {
-      height: 60%;
-    }
-    .date {
+    .row {
       display: flex;
+      flex-wrap: nowrap;
       justify-content: center;
-      align-items: center;
-      color: $secondary;
-      background-color: $primary;
-      border-radius: 50%;
-      height: 5rem;
-      width: 5rem;
-      flex-shrink: 0;
-    }
-  }
+      width: 100%;
 
-  .visible-part {
-    order: 3;
-    width: 80%;
-    padding-left: 1rem;
-    padding-bottom: 4rem;
-  }
-
-
-  @media (min-width: $tablet){
-    .visible-part,
-    .hidden-part {
-     width: 40%
-    }
-
-    .flipped {
-      .visible-part {
-        order: 1;
-        text-align: right;
-        padding-right: 1rem;
-        padding-left: 0;
+      &.just-a-line {
+        min-height: 6rem;
       }
 
-      .hidden-part {
-        order: 3;
+      .line-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 10rem;
+
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          color: $secondary;
+          background-color: $primary;
+          font-weight: bold;
+          border-radius: 50%;
+          height: 5rem;
+          width: 5rem;
+        }
+
+        .line {
+          border-left: 2px solid $primary;
+          height: 100%;
+        }
+      }
+
+      .text-part {
+        width: 80%;
+        padding-bottom: 4rem;
       }
     }
   }
