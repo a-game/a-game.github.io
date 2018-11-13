@@ -21,10 +21,6 @@
       justify-content: center;
       width: 100%;
 
-      &.just-a-line {
-        min-height: 6rem;
-      }
-
       .line-part {
         display: flex;
         flex-direction: column;
@@ -48,6 +44,7 @@
         .line {
           border-left: 2px solid $primary;
           height: 100%;
+          min-height: 6rem;
         }
       }
 

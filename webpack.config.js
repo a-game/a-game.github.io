@@ -11,18 +11,18 @@ marked.setOptions({
 });
 
 const devMode = process.env.NODE_ENV !== 'production';
-
-const MARKDOWN_FILE_DIR = path.join('src', '_blog', 'posts');
+const markdownPostsDir = path.join('src', '_blog', 'posts');
 
 const posts = fs
   // Read directory contents
-  .readdirSync(MARKDOWN_FILE_DIR)
+  .readdirSync(markdownPostsDir)
   // Take only .md files
   .filter(filename => /\.md$/.test(filename))
   // Normalize file data.
-  .map(filename => fs.readFileSync(path.join(MARKDOWN_FILE_DIR, filename), 'utf8'));
+  .map(filename => fs.readFileSync(path.join(markdownPostsDir, filename), 'utf8'));
 
 const createBlogPage = (post) => {
+  console.log("Building md to blog ...")
   const content = marked(post);
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', '_blog', 'template.html'),
