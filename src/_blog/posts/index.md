@@ -7,7 +7,7 @@ createdDate: 2018-09-25
 ## Hello World!
 
 Hope you're having a wonderful day :)  
-The entire point of this blog is for me to be able to google my own thoughts.
+The entire point of this "blog" is for me to be able to google my own thoughts.
 I'm just going to try and write things that I've learned and want to remember,
 or just stuff that I find interesting.
 

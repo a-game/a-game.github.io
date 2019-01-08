@@ -1,8 +1,8 @@
 ---
 filename: mdblog
 title: Ahmad Game - Blog
-author: Me
+author: Ahmad Game
 createdDate: 2018-09-25
 ...
 
-Todo...
+Coming soon (TM)...
