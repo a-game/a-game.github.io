@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat');
+$mainFont: 'Montserrat', sans-serif;
+$codeFont: 'Inconsolata', monospace;
+
+%bodyFont {
+  font-family: $mainFont;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+%codeFont {
+  font-family: $codeFont;
+  font-size: 85%;
+  line-height: 2.1rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  line-height: 5rem;
+}
+
+h2 {
+  line-height: 3.3rem;
+}
+
+h3 {
+  line-height: 2.2rem;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 2.2rem;
+}
+
+h5 {
+  line-height: 2.1rem;
+}
+
+small {
+  font-family: $mainFont;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}

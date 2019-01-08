@@ -1,0 +1,60 @@
+@import '../sass/style.scss';
+
+.experience {
+  .column-header {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 2rem;
+    }
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    margin: auto;
+
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+
+      &.just-a-line {
+        min-height: 6rem;
+      }
+
+      .line-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 10rem;
+
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          color: $secondary;
+          background-color: $primary;
+          font-weight: bold;
+          border-radius: 50%;
+          height: 5rem;
+          width: 5rem;
+        }
+
+        .line {
+          border-left: 2px solid $primary;
+          height: 100%;
+        }
+      }
+
+      .text-part {
+        width: 80%;
+        padding-bottom: 4rem;
+      }
+    }
+  }
+}

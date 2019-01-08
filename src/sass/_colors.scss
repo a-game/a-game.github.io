@@ -1,0 +1,23 @@
+// colors
+$white: #fff;
+$gray-light: #ddd;
+$gray-dark: #404040;
+$gray-transparent: rgba(0, 0, 0, 0.3);
+
+$primary: #333333;
+$primary-dark:#0c0c0c;
+$primary-light: #5c5c5c;
+
+$secondary: #077acc;
+$secondary-dark: #004f9b;
+$secondary-light: #5ca9ff;
+
+$background: #f5f5f6;
+
+.color-primary {
+    color: $primary;
+}
+
+.color-secondary {
+    color: $secondary;
+}

@@ -1,0 +1,108 @@
+@import 'colors';
+@import 'screens';
+@import 'nav';
+@import 'footer';
+@import 'progress';
+@import 'fonts';
+@import 'scrolltop';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // Makes 0.1rem be equal to 1px
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: $background;
+
+  color: $gray-dark;
+  @extend %bodyFont;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-dark;
+    text-decoration: underline;
+  }
+
+  &.dark-bg {
+    &:hover {
+      color: $secondary-light;
+      text-decoration: none;
+    }
+  }
+}
+
+hr {
+  // dividers
+  margin: 5rem auto;
+  background-color: $secondary-dark;
+  border-radius: .3rem;
+}
+
+pre {
+  padding: 1.6rem;
+  overflow: auto;
+  background-color: $white;
+  border: 0.1rem solid $gray-light;
+  border-radius: .3rem;
+  @extend %codeFont;
+}
+
+.content {
+  min-height: calc(100vh - #{$nav-height});
+  padding: 10rem 1.5rem;
+  margin: auto;
+
+  @media (min-width: $tablet) {
+    max-width: $tablet-container-width;
+  }
+  @media (min-width: $medium) {
+    max-width: $medium-container-width;
+  }
+  @media (min-width: $large) {
+    max-width: $large-container-width;
+  }
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
+.section-title {
+  margin-bottom: 4rem;
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .column {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 25rem;
+    max-width: 50%;
+
+    @media (max-width: $phone) {
+      min-width: 100%
+    }
+  }
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="page-top">
+  <%= require('html-loader!../partials/nav.html') %>
+  <%= require('html-loader!../partials/progress.html') %>
+  <%= require('html-loader!../partials/scrolltop.html') %>
+
+  <div class="content">
+    <%= htmlWebpackPlugin.options.content %>
+  </div>
+
+  <!-- This is a "hack" for nesting partials
+  https://stackoverflow.com/questions/49168671/webpack-include-html-partial-inside-another-partial
+  -->
+  <%= require('html-loader?root=.&minimize=true&interpolate=require!../partials/footer.html') %>
+</body>
+
+</html>
