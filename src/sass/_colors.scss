@@ -4,20 +4,20 @@ $gray-light: #ddd;
 $gray-dark: #404040;
 $gray-transparent: rgba(0, 0, 0, 0.3);
 
-$primary: #333333;
-$primary-dark:#0c0c0c;
-$primary-light: #5c5c5c;
+$primary: #3d3d3d;
+$primary-dark:#171717;
+$primary-light: #676767;
 
-$secondary: #077acc;
-$secondary-dark: #004f9b;
-$secondary-light: #5ca9ff;
+$secondary: #e84c3d;
+$secondary-dark: #af0b14;
+$secondary-light: #ff7f69;
 
 $background: #f5f5f6;
 
 .color-primary {
-    color: $primary;
+  color: $primary;
 }
 
 .color-secondary {
-    color: $secondary;
+  color: $secondary;
 }
