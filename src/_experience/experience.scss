@@ -26,7 +26,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-basis: 10rem;
 
         .date {
           display: flex;
@@ -36,9 +35,9 @@
           color: $secondary;
           background-color: $primary;
           font-weight: bold;
-          border-radius: 50%;
+          border-radius: .4rem;
           height: 5rem;
-          width: 5rem;
+          width: 10rem;
         }
 
         .line {
@@ -51,6 +50,7 @@
       .text-part {
         width: 80%;
         padding-bottom: 4rem;
+        margin-left: 6rem;
       }
     }
   }
