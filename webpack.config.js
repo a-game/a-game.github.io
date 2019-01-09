@@ -22,8 +22,8 @@ const posts = fs
   .map(filename => fs.readFileSync(path.join(markdownPostsDir, filename), 'utf8'));
 
 const createBlogPage = (post) => {
-  console.log("Building md to blog ...")
   const content = marked(post);
+  console.log(`Building makdown file: ${content.meta.filename}...`)
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', '_blog', 'template.html'),
     hash: true,
