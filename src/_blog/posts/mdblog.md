@@ -1,8 +1,9 @@
 ---
 filename: mdblog
-title: Ahmad Game - Blog
+title: How I made this not-blog
 author: Ahmad Game
-createdDate: 2018-09-25
+createdDate: 2018-12-25
+
 ...
 
 Coming soon (TM)...

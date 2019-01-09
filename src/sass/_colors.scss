@@ -1,8 +1,9 @@
 // colors
 $white: #fff;
-$gray-light: #ddd;
-$gray-dark: #404040;
-$gray-transparent: rgba(0, 0, 0, 0.3);
+$gray: #777;
+$gray-light: #ddd; // for text on dark background
+$gray-dark: #404040; // for text on light background
+$gray-transparent: rgba(0, 0, 0, 0.3); // for boxshadow
 
 $primary: #3d3d3d;
 $primary-dark:#171717;

@@ -30,6 +30,8 @@ const createBlogPage = (post) => {
     chunks: ['blog'],
     filename: path.join(__dirname, 'blog', `${content.meta.filename}.html`),
     title: content.meta.title,
+    author: content.meta.author,
+    createdDate: content.meta.createdDate.toDateString(),
     content: content.html
   });
 };

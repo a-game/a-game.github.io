@@ -36,6 +36,7 @@
   "scripts": {
     "dev": "npx webpack --mode=development -w",
     "build": "npx webpack --mode=production",
+    "publish": "git add -f assets && git add -f bio && git add -f blog && git add -f experience && git add -f index.html && git commit -m \"new version\" && git push",
     "start": "webpack-dev-server"
   },
   "dependencies": {

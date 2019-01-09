@@ -1,8 +1,25 @@
 ---
 filename: test
-title: test
+title: Style guide
 author: Me
-createdDate: 2018-09-25
+createdDate: 2019-01-01
+
 ...
 
-Just a test
+# H1
+## H2
+### H3
+#### H4
+##### H5
+
+- This
+- Is
+- A
+- List
+
+
+```
+function someCode() {
+    return true;
+}
+```
