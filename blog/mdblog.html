@@ -14,7 +14,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Ahmad Game">
-  <meta name="description" content="How to create a static website using Markdown and Webpack.">
+  <meta name="description" content="How to create a static website using Markdown and webpack.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     How I made this non-blog
@@ -45,22 +45,23 @@
     <i class="createdDate">
       Tue Dec 25 2018
     </i>
-    <h2 id="how-i-made-this-non-blog">How I made this non-blog</h2>
+    <h2 id="how-to-create-a-static-website-using-markdown-and-webpack">How to create a static website using Markdown and webpack</h2>
 <h3 id="let-s-start-with-why">Let&#39;s start with Why</h3>
-<p>A number of years ago I listened to a talk by <a href="https://www.hanselman.com/">Scott Hanselman</a> where he spoke about the reason he started blogging. He said, and I paraphrase, <em>&quot;It&#39;s a great way for me to remember stuff, because I can google my past thoughts.&quot;</em><br>That really stuck with me for some reason and I thought it was a very simple, unpretentious reason to start writing stuff on the internet.<br>I never thought I would do the same thing myself because, well, I don&#39;t have that many thoughts to begin with. Certainly nothing worth googling.  </p>
+<p>A number of years ago I listened to a talk by <a href="https://www.hanselman.com/">Scott Hanselman</a> where he spoke about the reason he started blogging. He said, and I paraphrase, <em>&quot;It&#39;s a great way for me to remember stuff, because I can google my past thoughts.&quot;</em>  </p>
+<p>That really stuck with me for some reason and I thought it was a very simple, unpretentious reason to start writing stuff on the internet.<br>I never thought I would do the same thing myself because, well, I don&#39;t have that many thoughts to begin with. Certainly nothing worth googling.  </p>
 <p>Recently however, it has been more common for me to have thoughts like <em>&quot;Hmm, I think I&#39;ve read something about that somewhere.&quot;</em> or <em>&quot;I think I&#39;ve solved this exact problem before.&quot;</em>. Suddenly I realized that I might have the same problem Hanselman had.</p>
 <h3 id="then-what-">Then what?</h3>
-<p>In order for me to start writing things down at all I had to make it super easy for myself. It had to be as easy as opening a text file and just writing things down  </p>
-<p>I already use <a href="https://daringfireball.net/projects/markdown/">Markdown.</a> for most of my notes which translates well into HTML so it seemed like a good choice.
+<p>In order for me to start writing things down at all I had to make it super easy for myself. It had to be as easy as opening a text file and just writing things down.  </p>
+<p>I already use <a href="https://daringfireball.net/projects/markdown/">Markdown</a> for most of my notes which translates well into HTML so it seemed like a good choice.
 However I felt like most of the available static website builders like <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://hexo.io/">Hexo</a> were a bit too much overhead.</p>
-<p>After a bit of googling I stumbled upon <a href="https://www.omardelarosa.com/posts/making-a-markdown-blog-using-webpack.html">this post by Omar Delarosa</a> which solves my exact problem using <a href="https://webpack.js.org/">Webpack</a>. I already had a personal website built with Webpack so adding the rendering of Markdown looked to be the easiest way forward.<br>So without further due, here is...</p>
-<h3 id="how-to-make-a-website-using-markdown-and-webpack">How to make a website using Markdown and Webpack</h3>
+<p>After a bit of googling I stumbled upon <a href="https://www.omardelarosa.com/posts/making-a-markdown-blog-using-webpack.html">this post by Omar Delarosa</a> which solves my exact problem using <a href="https://webpack.js.org/">webpack</a>. I already had a personal website built with webpack so adding the rendering of Markdown looked to be the easiest way forward.<br>So without further due, here is...</p>
+<h3 id="how-i-made-this-non-blog">How I made this non-blog</h3>
 <p>So the basic problems we want to solve are:</p>
 <ol>
-<li><p>Take some <code>Markdown</code> and convert it into <code>HTML</code>.<br>Which is exactly what <a href="https://marked.js.org/#/README.md">marked</a> does.  </p>
+<li><p>Take some Markdown and convert it into HTML.<br>Which is exactly what <a href="https://marked.js.org/#/README.md">marked</a> does.  </p>
 <p><em>Note: I&#39;m using <a href="https://github.com/j201/meta-marked">meta-marked</a> to do this because it allows you to add metadata, like title, author and description in the Markdown file as well as the actual content.</em></p>
 </li>
-<li><p>Then we want to take that <code>HTML</code> code and put that into an <code>.html</code> file together with any <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code> and metadata we want to include.<br>Which is exactly what <a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a> does.  </p>
+<li><p>Then we want to take that HTML code and put that into an <code>.html</code> file together with any <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code> and metadata we want to include.<br>Which is exactly what <a href="https://github.com/jantimon/html-webpack-plugin">html-webpack-plugin</a> does.  </p>
 </li>
 </ol>
 <p>So in order for us to be able to create a website with multiple different pages, there are two key features in <code>html-webpack-plugin</code> that we need:</p>
@@ -112,8 +113,8 @@ module.exports = {
   ]
 };
 </code></pre>
-<h4 id="extending-the-options-object-to-inject-our-markdown">Extending the <a href="https://github.com/jantimon/html-webpack-plugin#options"><code>options</code></a> object to inject our markdown</h4>
-<p>The <code>html-webpack-plugin</code> allows for quite a few <a href="https://github.com/jantimon/html-webpack-plugin#options">options</a> for customizing the generated <code>.html</code> file, like setting the title of the page, favicon or use a certain template for the page.  </p>
+<h4 id="extending-the-options-object-to-inject-our-markdown">Extending the <a href="https://github.com/jantimon/html-webpack-plugin#options"><code>options</code></a> object to inject our Markdown</h4>
+<p>The <code>html-webpack-plugin</code> allows for quite a few options for customizing the generated <code>.html</code> file, like setting the title of the page, favicon or use a certain template for the page.<br>Here is an example of using the <code>options</code> object:</p>
 <pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
 
 <span class="hljs-keyword">const</span> HtmlWebpackPlugin = require(<span class="hljs-string">'html-webpack-plugin'</span>);
@@ -144,7 +145,7 @@ module.exports = {
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <p>And the result will be an <code>.html</code> file with the title &#39;Hello World&#39;.  </p>
-<p>The neat thing about this is that you can extend the options object with whatever you want, and use those &quot;custom&quot; values in your template.</p>
+<p>The neat thing about this is that you can extend the <code>options</code> object with whatever you want, and use those &quot;custom&quot; values in your template.</p>
 <pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
 
 <span class="hljs-keyword">const</span> HtmlWebpackPlugin = require(<span class="hljs-string">'html-webpack-plugin'</span>);
@@ -193,9 +194,18 @@ module.exports = {
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>This feature is the key to injecting the converted <code>Markdown</code> content into the generated <code>.html</code> file.</p>
+<p>This feature is the key to injecting the converted Markdown content into the generated <code>.html</code> file.</p>
 <h4 id="now-let-s-combine-the-two-features">Now let&#39;s combine the two features</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>);
+<pre><code class="lang-js"><span class="hljs-comment">// This is just an example.</span>
+<span class="hljs-comment">// The actual files will probably be </span>
+<span class="hljs-comment">// loaded from .md files</span>
+<span class="hljs-keyword">const</span> myMarkdownFiles = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'index.md'</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">'# Hello World'</span>
+  }
+];
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">'html-webpack-plugin'</span>);
 <span class="hljs-keyword">const</span> marked = <span class="hljs-built_in">require</span>(<span class="hljs-string">'meta-marked'</span>);
 
 <span class="hljs-keyword">const</span> createPage = <span class="hljs-function">(<span class="hljs-params">markdownFile</span>) =&gt;</span> {
@@ -224,7 +234,7 @@ module.exports = {
   ]
 };
 </code></pre>
-<p>Voilà, now you have a static website, build with <code>Markdown</code></p>
+<p>Voilà, now you have a static website, build with Markdown</p>
 <p>I&#39;ve compiled an MVP to create a static website using this method that you can <a href="https://github.com/a-game/markdown-website">check out here.</a><br>For a slightly more advanced setup combining my original website and the newer Markdown parts you can check out the source code of this very website, <a href="https://github.com/a-game/a-game.github.io">which is available here.</a></p>
 
   </div>

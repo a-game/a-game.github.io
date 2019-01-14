@@ -1,37 +1,38 @@
 ---
 title: How I made this non-blog
 author: Ahmad Game
-description: How to create a static website using Markdown and Webpack.
+description: How to create a static website using Markdown and webpack.
 createdDate: 2018-12-25
 ...
 
-## How I made this non-blog
+## How to create a static website using Markdown and webpack
 
 ### Let's start with Why
 A number of years ago I listened to a talk by [Scott Hanselman][1] where he spoke about the reason he started blogging. He said, and I paraphrase, _"It's a great way for me to remember stuff, because I can google my past thoughts."_  
+
 That really stuck with me for some reason and I thought it was a very simple, unpretentious reason to start writing stuff on the internet.  
 I never thought I would do the same thing myself because, well, I don't have that many thoughts to begin with. Certainly nothing worth googling.  
 
 Recently however, it has been more common for me to have thoughts like _"Hmm, I think I've read something about that somewhere."_ or _"I think I've solved this exact problem before."_. Suddenly I realized that I might have the same problem Hanselman had.
 
 ### Then what?
-In order for me to start writing things down at all I had to make it super easy for myself. It had to be as easy as opening a text file and just writing things down  
+In order for me to start writing things down at all I had to make it super easy for myself. It had to be as easy as opening a text file and just writing things down.  
 
-I already use [Markdown.][2] for most of my notes which translates well into HTML so it seemed like a good choice.
+I already use [Markdown][2] for most of my notes which translates well into HTML so it seemed like a good choice.
 However I felt like most of the available static website builders like [Jekyll][4] and [Hexo][3] were a bit too much overhead.
 
-After a bit of googling I stumbled upon [this post by Omar Delarosa][5] which solves my exact problem using [Webpack][6]. I already had a personal website built with Webpack so adding the rendering of Markdown looked to be the easiest way forward.  
+After a bit of googling I stumbled upon [this post by Omar Delarosa][5] which solves my exact problem using [webpack][6]. I already had a personal website built with webpack so adding the rendering of Markdown looked to be the easiest way forward.  
 So without further due, here is...
 
-### How to make a website using Markdown and Webpack
+### How I made this non-blog
 
 So the basic problems we want to solve are:
-1. Take some `Markdown` and convert it into `HTML`.  
+1. Take some Markdown and convert it into HTML.  
 Which is exactly what [marked][7] does.  
 
    _Note: I'm using [meta-marked][8] to do this because it allows you to add metadata, like title, author and description in the Markdown file as well as the actual content._
 
-2. Then we want to take that `HTML` code and put that into an `.html` file together with any `<style>`, `<link>`, `<script>` and metadata we want to include.  
+2. Then we want to take that HTML code and put that into an `.html` file together with any `<style>`, `<link>`, `<script>` and metadata we want to include.  
 Which is exactly what [html-webpack-plugin][9] does.  
 
 So in order for us to be able to create a website with multiple different pages, there are two key features in `html-webpack-plugin` that we need:
@@ -90,8 +91,9 @@ module.exports = {
 };
 ```
 
-#### Extending the [`options`][10] object to inject our markdown
-The `html-webpack-plugin` allows for quite a few [options][14] for customizing the generated `.html` file, like setting the title of the page, favicon or use a certain template for the page.  
+#### Extending the [`options`][10] object to inject our Markdown
+The `html-webpack-plugin` allows for quite a few options for customizing the generated `.html` file, like setting the title of the page, favicon or use a certain template for the page.  
+Here is an example of using the `options` object:
 
 ```js
 // webpack.config.js
@@ -127,7 +129,7 @@ module.exports = {
 ```
 And the result will be an `.html` file with the title 'Hello World'.  
 
-The neat thing about this is that you can extend the options object with whatever you want, and use those "custom" values in your template.
+The neat thing about this is that you can extend the `options` object with whatever you want, and use those "custom" values in your template.
 
 ```js
 // webpack.config.js
@@ -184,10 +186,20 @@ And the result will look like this:
 </html>
 ```
 
-This feature is the key to injecting the converted `Markdown` content into the generated `.html` file.
+This feature is the key to injecting the converted Markdown content into the generated `.html` file.
 
 #### Now let's combine the two features
+
 ```js
+// This is just an example.
+// The actual files will probably be 
+// loaded from .md files
+const myMarkdownFiles = [
+  {
+    name: 'index.md',
+    content: '# Hello World'
+  }
+];
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const marked = require('meta-marked');
 
@@ -218,7 +230,7 @@ module.exports = {
 };
 ```
 
-Voilà, now you have a static website, build with `Markdown`
+Voilà, now you have a static website, build with Markdown
 
 I've compiled an MVP to create a static website using this method that you can [check out here.][11]  
 For a slightly more advanced setup combining my original website and the newer Markdown parts you can check out the source code of this very website, [which is available here.][12]
@@ -236,4 +248,3 @@ For a slightly more advanced setup combining my original website and the newer M
 [11]: https://github.com/a-game/markdown-website
 [12]: https://github.com/a-game/a-game.github.io
 [13]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-[14]: https://github.com/jantimon/html-webpack-plugin#options
