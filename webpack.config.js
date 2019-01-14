@@ -19,18 +19,26 @@ const posts = fs
   // Take only .md files
   .filter(filename => /\.md$/.test(filename))
   // Normalize file data.
-  .map(filename => fs.readFileSync(path.join(markdownPostsDir, filename), 'utf8'));
+  .map(filename => {
+    return {
+      name: path.parse(filename).name,
+      content: fs.readFileSync(path.join(srcDir, filename), 'utf8')
+    };
+  });
 
 const createBlogPage = (post) => {
-  const content = marked(post);
-  console.log(`Building makdown file: ${content.meta.filename}...`)
+  console.log(`Building makdown file: ${post.name}.md...`)
+
+  const content = marked(post.content);
+
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', '_blog', 'template.html'),
     hash: true,
     chunks: ['blog'],
-    filename: path.join(__dirname, 'blog', `${content.meta.filename}.html`),
+    filename: path.join(__dirname, 'blog', `${post.name}.html`),
     title: content.meta.title,
     author: content.meta.author,
+    description: content.meta.description,
     createdDate: content.meta.createdDate.toDateString(),
     content: content.html
   });

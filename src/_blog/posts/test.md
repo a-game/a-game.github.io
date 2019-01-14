@@ -1,5 +1,4 @@
 ---
-filename: test
 title: Style guide
 author: Me
 createdDate: 2019-01-01
