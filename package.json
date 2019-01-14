@@ -13,33 +13,31 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "autoprefixer": "^9.1.5",
-    "babel-loader": "^8.0.2",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.5",
+    "babel-loader": "^8.0.5",
     "css-loader": "^1.0.0",
-    "cssnano": "^4.1.0",
+    "cssnano": "^4.1.8",
     "file-loader": "^2.0.0",
     "file-system": "^2.2.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "meta-marked": "^0.4.2",
-    "mini-css-extract-plugin": "^0.4.3",
-    "node-sass": "^4.9.3",
-    "postcss-import": "^12.0.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.11.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.9"
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "highlight.js": "^9.13.1"
   },
   "scripts": {
-    "dev": "npx webpack --mode=development -w",
-    "build": "npx webpack --mode=production",
+    "dev": "webpack --mode=development -w",
+    "build": "webpack --mode=production",
     "publish": "git add -f assets && git add -f bio && git add -f blog && git add -f experience && git add -f index.html && git commit -m \"new version\" && git push",
     "start": "webpack-dev-server"
-  },
-  "dependencies": {
-    "highlight.js": "^9.12.0"
   }
 }
