@@ -34,6 +34,7 @@ const createBlogPage = (post) => {
   return new HtmlWebpackPlugin({
     template: path.join(__dirname, 'src', '_blog', 'template.html'),
     hash: true,
+    cache: true,
     chunks: ['blog'],
     filename: path.join(__dirname, 'blog', `${post.name}.html`),
     title: content.meta.title,
