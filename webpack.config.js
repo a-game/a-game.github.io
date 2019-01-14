@@ -22,7 +22,7 @@ const posts = fs
   .map(filename => {
     return {
       name: path.parse(filename).name,
-      content: fs.readFileSync(path.join(srcDir, filename), 'utf8')
+      content: fs.readFileSync(path.join(markdownPostsDir, filename), 'utf8')
     };
   });
 
