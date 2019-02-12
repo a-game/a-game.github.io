@@ -1,5 +1,9 @@
 @import '../sass/style.scss';
 
+body {
+  background-color: $primary-light;
+}
+
 .header {
   display: flex;
   flex-direction: column;

@@ -22,3 +22,7 @@ function someCode() {
     return true;
 }
 ```
+
+| This |  Is   |    A    | Table |
+| :--- | :---: | :-----: | ----: |
+| With | Four  | Columns |       |

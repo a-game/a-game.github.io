@@ -60,6 +60,7 @@ pre {
 }
 
 .content {
+  visibility: hidden; // Content is shown when done loading in init.js
   min-height: calc(100vh - #{$nav-height});
   padding: 10rem 1.5rem;
   margin: auto;
