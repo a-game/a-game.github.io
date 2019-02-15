@@ -37,7 +37,7 @@
   "scripts": {
     "dev": "webpack --mode=development -w",
     "build": "webpack --mode=production",
-    "publish": "git add -A && git commit -m \"new version\" && git push",
+    "heroku-postbuild": "webpack -p",
     "start": "webpack-dev-server"
   }
 }
