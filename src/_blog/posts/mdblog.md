@@ -37,7 +37,7 @@ Which is exactly what [html-webpack-plugin][9] does.
 
 So in order for us to be able to create a website with multiple different pages, there are two key features in `html-webpack-plugin` that we need:
 
-#### Generating multiple `.html` pages
+#### 1. Generating multiple `.html` pages
 You can add as many instances of the `HtmlWebpackPlugin` as you want to the `plugins` array to generate multiple pages.
 
 ```javascript
@@ -91,7 +91,7 @@ module.exports = {
 };
 ```
 
-#### Extending the [`options`][10] object to inject our Markdown
+#### 2. Extending the [`options`][10] object to inject our Markdown
 The `html-webpack-plugin` allows for quite a few options for customizing the generated `.html` file, like setting the title of the page, favicon or use a certain template for the page.  
 Here is an example of using the `options` object:
 

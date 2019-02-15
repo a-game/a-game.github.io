@@ -11,7 +11,7 @@
   <title>
     How I made this non-blog
   </title>
-<link href="../assets/blog.css?5baeae6d943a75552adc" rel="stylesheet"></head>
+<link href="../assets/blog.css?2680b783e346864553f2" rel="stylesheet"></head>
 
 <body id="page-top">
   <div class=nav> <input type=checkbox id=nav-check> <span class="bar first"></span> <span class="bar second"></span> <span class="bar third"></span> <div class=nav-menu> <a class="nav-menu-item dark-bg" href=/ >Home</a> <a class="nav-menu-item dark-bg" href=/bio/ >Who I am</a> <a class="nav-menu-item dark-bg" href=/experience/ >What I do</a> <a class="nav-menu-item dark-bg" href=/blog/ >What I think</a> </div> </div>
@@ -42,7 +42,7 @@ However I felt like most of the available static website builders like <a href="
 </li>
 </ol>
 <p>So in order for us to be able to create a website with multiple different pages, there are two key features in <code>html-webpack-plugin</code> that we need:</p>
-<h4 id="generating-multiple-html-pages">Generating multiple <code>.html</code> pages</h4>
+<h4 id="1-generating-multiple-html-pages">1. Generating multiple <code>.html</code> pages</h4>
 <p>You can add as many instances of the <code>HtmlWebpackPlugin</code> as you want to the <code>plugins</code> array to generate multiple pages.</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// webpack.config.js</span>
 
@@ -90,7 +90,7 @@ module.exports = {
   ]
 };
 </code></pre>
-<h4 id="extending-the-options-object-to-inject-our-markdown">Extending the <a href="https://github.com/jantimon/html-webpack-plugin#options"><code>options</code></a> object to inject our Markdown</h4>
+<h4 id="2-extending-the-options-object-to-inject-our-markdown">2. Extending the <a href="https://github.com/jantimon/html-webpack-plugin#options"><code>options</code></a> object to inject our Markdown</h4>
 <p>The <code>html-webpack-plugin</code> allows for quite a few options for customizing the generated <code>.html</code> file, like setting the title of the page, favicon or use a certain template for the page.<br>Here is an example of using the <code>options</code> object:</p>
 <pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
 
@@ -220,6 +220,6 @@ module.exports = {
   https://stackoverflow.com/questions/49168671/webpack-include-html-partial-inside-another-partial
   -->
   <footer> <div class=footer-content> <p>Wanna get a hold of me?</p> <div class=contact> <a class=dark-bg href=https://github.com/a-game target=blank> <svg class=icon-github-square> <use xlink:href=../assets/img/icons.svg#icon-github-square></use> </svg> </a> <a class=dark-bg href=https://www.linkedin.com/in/ahmadgame target=blank> <svg class=icon-linkedin-square> <use xlink:href=../assets/img/icons.svg#icon-linkedin-square></use> </svg> </a> <a class=dark-bg href=mailto:me@ahmadgame.com target=blank> <svg class=icon-envelope> <use xlink:href=../assets/img/icons.svg#icon-envelope></use> </svg> </a> </div> </div> </footer>
-<script type="text/javascript" src="../assets/blog.js?5baeae6d943a75552adc"></script></body>
+<script type="text/javascript" src="../assets/blog.js?2680b783e346864553f2"></script></body>
 
 </html>
