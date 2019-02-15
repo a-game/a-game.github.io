@@ -36,8 +36,7 @@
   },
   "scripts": {
     "dev": "webpack --mode=development -w",
-    "build": "webpack --mode=production",
-    "heroku-postbuild": "webpack -p",
+    "build": "webpack -p",
     "start": "webpack-dev-server"
   }
 }
