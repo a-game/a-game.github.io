@@ -16,13 +16,25 @@ createdDate: 2019-01-01
 - A
 - List
 
+This is a normal paragraph  
 
-```
+Here is another paragraph
+
+<div class="code-filename">test.js</div>
+
+```js
 function someCode() {
     return true;
 }
 ```
 
-| This |  Is   |    A    | Table |
-| :--- | :---: | :-----: | ----: |
-| With | Four  | Columns |       |
+```C#
+public void CodeWithoutAFileName() {
+    return true;
+}
+```
+
+| This long header for a column |  Is   |    A    | Table |
+| :---------------------------- | :---: | :-----: | ----: |
+| With                          | Four  | Columns |       |
+| tick                          |  tak  |   toe   |  test |

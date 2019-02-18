@@ -40,9 +40,9 @@ So in order for us to be able to create a website with multiple different pages,
 #### 1. Generating multiple `.html` pages
 You can add as many instances of the `HtmlWebpackPlugin` as you want to the `plugins` array to generate multiple pages.
 
-```javascript
-// webpack.config.js
+<div class="code-filename">webpack.config.js</div>
 
+```js
 module.exports = {
   entry: {
     index: 'index.js',
@@ -70,9 +70,9 @@ module.exports = {
 
 Or use the [spread operator][13] to do the same thing with less code.
 
-```js
-// webpack.config.js
+<div class="code-filename">webpack.config.js</div>
 
+```js
 // returns an array of HtmlWebpackPlugin
 const createPages = () => [1, 2].map(n => createPage(n)));
 
@@ -95,9 +95,9 @@ module.exports = {
 The `html-webpack-plugin` allows for quite a few options for customizing the generated `.html` file, like setting the title of the page, favicon or use a certain template for the page.  
 Here is an example of using the `options` object:
 
-```js
-// webpack.config.js
+<div class="code-filename">webpack.config.js</div>
 
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -111,8 +111,9 @@ module.exports = {
 };
 ```
 
+<div class="code-filename">template.html</div>
+
 ```html
-<!-- template.html -->
 <!DOCTYPE html>
 <html>
 
@@ -131,9 +132,9 @@ And the result will be an `.html` file with the title 'Hello World'.
 
 The neat thing about this is that you can extend the `options` object with whatever you want, and use those "custom" values in your template.
 
-```js
-// webpack.config.js
+<div class="code-filename">webpack.config.js</div>
 
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -148,8 +149,9 @@ module.exports = {
 };
 ```
 
+<div class="code-filename">template.html</div>
+
 ```html
-<!-- template.html -->
 <!DOCTYPE html>
 <html>
 
@@ -168,8 +170,9 @@ module.exports = {
 
 And the result will look like this:
 
+<div class="code-filename">template.html</div>
+
 ```html
-<!-- template.html -->
 <!DOCTYPE html>
 <html>
 
@@ -189,6 +192,8 @@ And the result will look like this:
 This feature is the key to injecting the converted Markdown content into the generated `.html` file.
 
 #### Now let's combine the two features
+
+<div class="code-filename">webpack.config.js</div>
 
 ```js
 // This is just an example.

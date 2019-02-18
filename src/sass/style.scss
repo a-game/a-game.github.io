@@ -60,8 +60,28 @@ pre {
   background-color: $white;
   border: 0.1rem solid $gray-light;
   border-radius: .3rem;
+
   @extend %codeFont;
 }
+
+table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tr {
+    background-color: $white;
+    border-top: .1rem solid $gray-light;
+  }
+
+  th, td {
+    border: .1rem solid $gray-light;
+    padding: .6rem 1.3rem;
+  }
+}
+
 
 .content {
   visibility: hidden; // Content is shown when done loading in init.js
@@ -75,6 +95,26 @@ pre {
   @media (min-width: $medium) {
     max-width: $medium-container-width;
   }
+}
+
+.code-filename {
+  width: fit-content;
+  overflow: auto;
+  padding: .6rem 1.2rem .4rem 1.2rem;
+  margin-bottom: -1em;
+  background-color: $white;
+  border: .1rem solid $gray-light;
+  border-bottom: none;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+  + pre {
+    border-top-left-radius: 0;
+  }
+
+  @extend %codeFont;
 }
 
 .createdDate {
