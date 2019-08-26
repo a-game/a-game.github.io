@@ -1,9 +1,0 @@
-{
-    "files.exclude": {
-        "assets": true,
-        "bio": true,
-        "blog": true,
-        "experience": true,
-        "index.html": true
-    }
-}
