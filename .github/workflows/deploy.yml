@@ -18,3 +18,4 @@ jobs:
           FOLDER: public
           BUILD_SCRIPT: npm install && npm run build
           CNAME: ahmadgame.com
+          BASE_BRANCH: src
