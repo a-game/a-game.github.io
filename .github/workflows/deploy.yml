@@ -10,12 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
+      - name: npm install, build and deploy
+          run: |
+            npm install
+            npm run build
+            npm run deploy
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: master
-          FOLDER: public
-          BUILD_SCRIPT: npm install && npm run build
-          CNAME: ahmadgame.com
-          BASE_BRANCH: src
