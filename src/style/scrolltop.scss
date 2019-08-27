@@ -1,0 +1,20 @@
+@import 'screens';
+@import 'colors';
+
+.scroll-top {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: $primary;
+    color: $secondary;
+    box-shadow: 0 0.2rem 0.2rem 0 $gray-transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

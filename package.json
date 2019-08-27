@@ -1,0 +1,51 @@
+{
+  "name": "ahmadgame.com",
+  "private": true,
+  "description": "Ahmad Game personal website.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ahmad Game",
+    "email": "me@ahmadgame.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-game/a-game.github.io.git"
+  },
+  "homepage": "https://ahmadgame.com",
+  "dependencies": {
+    "gatsby": "^2.13.82",
+    "gatsby-image": "^2.2.14",
+    "gatsby-plugin-google-analytics": "^2.1.11",
+    "gatsby-plugin-manifest": "^2.2.9",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-react-helmet": "^3.1.5",
+    "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-sharp": "^2.2.18",
+    "gatsby-plugin-sitemap": "^2.2.9",
+    "gatsby-remark-highlight.js": "0.0.1",
+    "gatsby-source-filesystem": "^2.1.18",
+    "gatsby-transformer-remark": "^2.6.19",
+    "gatsby-transformer-sharp": "^2.2.12",
+    "highlight.js": "^9.15.10",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "deploy": "node ./deploy",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  }
+}
