@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SEO, ListLink, Link } from "../components";
+import { Layout, SEO, Link, TagList } from "../components";
 import { MdMultilineChart, MdCode, MdSchool } from "react-icons/md";
 import { FaBaby } from "react-icons/fa";
 import style from "./experience.module.scss";
@@ -181,17 +181,22 @@ const XpPage = () => {
           <h2 className="text-center">Experience</h2>
           <div className={style.project}>
             <h3>Lime CRM add-ons</h3>
-            <ul className={style.tags}>
-              <ListLink to="https://www.python.org/">Python</ListLink>
-              <ListLink to="https://developer.mozilla.org/en-US/docs/Web/Web_Components">
-                Web Components
-              </ListLink>
-              <ListLink to="https://reactjs.org/">React</ListLink>
-              <ListLink to="https://stenciljs.com">stencil.js</ListLink>
-              <ListLink to="https://www.ecma-international.org/ecma-262/9.0/">
-                ES 2018
-              </ListLink>
-            </ul>
+            <TagList
+              tags={[
+                { label: "Python", url: "https://www.python.org/" },
+                {
+                  label: "Web Components",
+                  url:
+                    "https://developer.mozilla.org/en-US/docs/Web/Web_Components",
+                },
+                { label: "React", url: "https://reactjs.org/" },
+                { label: "stencil.js", url: "https://stenciljs.com" },
+                {
+                  label: "ES 2018",
+                  url: "https://www.ecma-international.org/ecma-262/9.0/",
+                },
+              ]}
+            />
             <p>
               Lime CRM is an interesting product, with a really bad name. It's
               not really a CRM at all. It's more like a platform for building
@@ -216,7 +221,7 @@ const XpPage = () => {
               Although this was not my main job at the time, I learned a lot by
               testing and building small add-ons (which is a packaged
               combination of the aforementioned customizations). Imagine
-              building a React app with the dev team in the room next door{" "}
+              building a React app with the dev team in the room next door.{" "}
               <span role="img" aria-label="smile">
                 😎
               </span>
@@ -224,11 +229,13 @@ const XpPage = () => {
           </div>
           <div className={style.project}>
             <h3>Product Management</h3>
-            <ul className={style.tags}>
-              <ListLink to="https://ads.google.com">Google Ads</ListLink>
-              <ListLink to="https://metabase.com/">Metabase</ListLink>
-              <ListLink to="https://segment.com/">Segment</ListLink>
-            </ul>
+            <TagList
+              tags={[
+                { label: "Google Ads", url: "https://ads.google.com" },
+                { label: "Metabase", url: "https://metabase.com/" },
+                { label: "Segment", url: "https://segment.com/" },
+              ]}
+            />
             <p>
               As a product manager I was responsible for the whole user journey.
               That often starts with a web search for some solution to their
@@ -246,21 +253,26 @@ const XpPage = () => {
           </div>
           <div className={style.project}>
             <h3>Lime Go</h3>
-            <ul className={style.tags}>
-              <ListLink to="https://dotnet.microsoft.com/apps/aspnet">
-                ASP.NET
-              </ListLink>
-              <ListLink to="https://github.com/dotnet/core">.NET Core</ListLink>
-              <ListLink to="https://www.elastic.co/products/elasticsearch">
-                Elastic Search
-              </ListLink>
-              <ListLink to="https://aws.amazon.com/">AWS</ListLink>
-              <ListLink to="https://graphql.org/">GraphQL</ListLink>
-              <ListLink to="https://www.ecma-international.org/ecma-262/6.0/">
-                ES6
-              </ListLink>
-              <ListLink to="https://www.docker.com/">Docker</ListLink>
-            </ul>
+            <TagList
+              tags={[
+                {
+                  label: "ASP.NET",
+                  url: "https://dotnet.microsoft.com/apps/aspnet",
+                },
+                { label: ".NET Core", url: "https://github.com/dotnet/core" },
+                {
+                  label: "Elastic Search",
+                  url: "https://www.elastic.co/products/elasticsearch",
+                },
+                { label: "AWS", url: "https://aws.amazon.com/" },
+                { label: "GraphQL", url: "https://graphql.org/" },
+                {
+                  label: "ES6",
+                  url: "https://www.ecma-international.org/ecma-262/6.0/",
+                },
+                { label: "Docker", url: "https://www.docker.com/" },
+              ]}
+            />
             <p>
               Go was my first real experience with web development and working
               with SaaS. Go is a SPA built on modern web infrastructure with
@@ -279,15 +291,19 @@ const XpPage = () => {
           </div>
           <div className={style.project}>
             <h3>Lime Easy</h3>
-            <ul className={style.tags}>
-              <ListLink to="https://docs.microsoft.com/en-us/windows/win32/com/">
-                COM
-              </ListLink>
-              <ListLink to="https://docs.microsoft.com/en-us/windows/win32/">
-                Win32
-              </ListLink>
-              <ListLink to="https://dotnet.microsoft.com">.NET</ListLink>
-            </ul>
+            <TagList
+              tags={[
+                {
+                  label: "COM",
+                  url: "https://docs.microsoft.com/en-us/windows/win32/com/",
+                },
+                {
+                  label: "Win32",
+                  url: "https://docs.microsoft.com/en-us/windows/win32/",
+                },
+                { label: ".NET", url: "https://dotnet.microsoft.com" },
+              ]}
+            />
             <p>
               Easy is the first "real life" software product I've worked on so
               maybe it's not so surprising that it taught me the most.

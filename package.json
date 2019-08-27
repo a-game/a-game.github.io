@@ -45,7 +45,6 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "identify": "git config --global user.email \"me@ahmadgame.com\" && git config --global user.name \"Ahmad Game\"",
     "deploy": "gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   }

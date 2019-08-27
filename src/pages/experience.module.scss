@@ -49,36 +49,6 @@
   }
 }
 
-.tags {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin-bottom: 4rem;
-
-  > li {
-    > a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      margin-right: 1rem;
-      padding: 0.2rem 1.2rem;
-      color: $white;
-      border-radius: 1.5rem;
-      background: $secondary-dark;
-      color: $white;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: $secondary;
-        text-decoration: none;
-      }
-    }
-
-    @extend %codeFont;
-  }
-}
-
 .project {
   margin-bottom: 10rem;
 }
