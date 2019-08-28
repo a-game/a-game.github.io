@@ -1,10 +1,14 @@
 import React from "react";
 
+import { ListLink, Link } from ".";
+import Logo from "../images/G-logo-round.svg";
 import style from "./header.module.scss";
-import { ListLink } from ".";
 
 const Header = () => (
   <header>
+    <Link className={style.logo} to="/">
+      <img src={Logo} alt="Game Logo" />
+    </Link>
     <nav>
       <input type="checkbox" />
       <span className={`${style.bar} ${style.first}`} />

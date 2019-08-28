@@ -5,6 +5,9 @@
 header {
   background-color: $primary;
   box-shadow: 0 0.2rem 0.1rem 0 $gray-transparent;
+  .logo {
+    display: none;
+  }
 
   nav {
     height: 100%;
@@ -29,6 +32,17 @@ header {
 
 @media (max-width: $tablet) {
   header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: block;
+      height: 4rem;
+      > img {
+        height: 100%;
+      }
+    }
     nav {
       display: flex;
       flex-direction: column;
@@ -100,7 +114,7 @@ header {
         right: -32rem; // width + box-shadow
         width: 30rem;
         height: 100vh;
-        padding: 0 5rem;
+        padding: 3rem 5rem;
         margin-top: $header-height;
         display: flex;
         flex-direction: column;
