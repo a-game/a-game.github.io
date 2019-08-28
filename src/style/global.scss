@@ -153,11 +153,8 @@ code,
 }
 
 pre {
-  padding: 1.6rem;
   overflow: auto;
-  border: 0.1rem solid $gray-light;
   border-radius: 0.3rem;
-  background-color: $white;
 }
 
 .code-filename {
@@ -165,8 +162,8 @@ pre {
   overflow: auto;
   padding: 0.6rem 1.2rem 0.4rem 1.2rem;
   margin-bottom: -1em;
-  background-color: $white;
-  border: 0.1rem solid $gray-light;
+  background-color: $primary;
+  color: $white;
   border-bottom: none;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
@@ -178,18 +175,10 @@ pre {
   }
 }
 
-@import "~highlight.js/scss/github-gist.scss";
+// @import "~highlight.js/scss/xcode.scss";
+@import "~highlight.js/scss/vs2015.scss";
 
 // override hljs styling
 .hljs {
-  background-color: transparent;
-  color: $gray-dark;
-  padding: 0;
-
-  .hljs-keyword,
-  .hljs-selector-tag,
-  .hljs-type,
-  .hljs-built_in {
-    color: $secondary-dark;
-  }
+  padding: 1.6rem;
 }
