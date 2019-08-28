@@ -1,5 +1,5 @@
 @import "../style/colors";
-@import "../style/dimentions";
+@import "../style/header-height";
 
 .hero {
   height: calc(100vh - #{$header-height});
