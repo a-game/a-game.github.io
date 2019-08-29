@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { IconContext } from "react-icons";
 
 import { Header, Contact } from ".";
-import "./layout.module.scss";
 
 const Layout = ({ hideFooter, children }) => {
   const data = useStaticQuery(graphql`

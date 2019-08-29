@@ -1,6 +1,7 @@
 @import "colors";
 @import "screens";
 @import "fonts";
+@import "header-height";
 
 * {
   box-sizing: border-box;
@@ -18,15 +19,44 @@ body {
   overflow-x: hidden;
   background-color: $background;
   color: $gray-dark;
+
   @extend %bodyFont;
 }
 
+main {
+  padding-top: $header-height;
+}
+
+$footer-height: 5rem;
+
 footer {
+  bottom: 0;
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   background-color: $primary;
   color: $gray-light;
 }
+
+article {
+  padding: 10rem 1.5rem;
+  margin: auto;
+  min-height: calc(100vh - (#{$header-height} + #{$footer-height}));
+
+  @media (min-width: $tablet) {
+    max-width: $tablet-container-width;
+  }
+  @media (min-width: $medium) {
+    max-width: $medium-container-width;
+  }
+}
+
+section:not(:last-child) {
+  margin-bottom: 10rem;
+}
+
 
 a {
   text-decoration: none;
@@ -94,18 +124,6 @@ table {
   }
 }
 
-.content {
-  padding: 10rem 1.5rem;
-  margin: auto;
-
-  @media (min-width: $tablet) {
-    max-width: $tablet-container-width;
-  }
-  @media (min-width: $medium) {
-    max-width: $medium-container-width;
-  }
-}
-
 .createdDate {
   color: $gray;
 }
@@ -114,9 +132,6 @@ table {
   text-align: center;
 }
 
-section:not(:last-child) {
-  margin-bottom: 10rem;
-}
 
 .row {
   display: flex;

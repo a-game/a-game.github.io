@@ -8,7 +8,7 @@ const XpPage = () => {
   return (
     <Layout>
       <SEO title="Experience" description="My Experience and resumé" />
-      <article className="content">
+      <article>
         <section>
           <h2 className="text-center">What I do</h2>
           <div className="row">
