@@ -63,11 +63,10 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>Founder - Gamesome</h4>
+                <h4>Co-Founder &nbsp;&mdash;&nbsp; Gamesome</h4>
                 <p>
-                  Gamesome is a software company that I'm hoping will start out
-                  as a consultant company and then grow into product
-                  development. But time will tell.
+                  Gamesome is a software consultant company with a long term
+                  plan to grow into developing our own products.
                 </p>
               </div>
             </div>
@@ -77,7 +76,7 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>Product manager - Lime Technologies</h4>
+                <h4>Product manager &nbsp;&mdash;&nbsp; Lime Technologies</h4>
                 <p>
                   After working as developer for four years, I got offered a
                   position as a product manager at Lime. That sounded like fun
@@ -103,7 +102,9 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>Software developer - Lime Technologies</h4>
+                <h4>
+                  Software developer &nbsp;&mdash;&nbsp; Lime Technologies
+                </h4>
                 <p>
                   Lime is the swedish market leader on CRM. They develop, sell,
                   deliver and support their CRM products. This is quite great if
@@ -127,7 +128,9 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>BS in Software development - Lund University</h4>
+                <h4>
+                  BS in Software development &nbsp;&mdash;&nbsp; Lund University
+                </h4>
                 <p>
                   After starting a few programs, I finally finished a degree in
                   software development. What's cool about This specific program,
@@ -141,7 +144,7 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>Programming Tutor - Lund University</h4>
+                <h4>Programming Tutor &nbsp;&mdash;&nbsp; Lund University</h4>
                 <p>
                   During my studies, I worked for Lund university as a tutor,
                   helping other students with programming classes. This was fun
@@ -157,7 +160,7 @@ const XpPage = () => {
                 <div className={style.line}></div>
               </div>
               <div className={style.textPart}>
-                <h4>Study - Lund University</h4>
+                <h4>Study &nbsp;&mdash;&nbsp; Lund University</h4>
                 <p>
                   At this point of my life, I couldn't really decide on what I
                   wanted to do. To solve that problem I just enrolled to as many
