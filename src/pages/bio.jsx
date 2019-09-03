@@ -20,7 +20,7 @@ const BioPage = () => {
   return (
     <Layout>
       <SEO title="Bio" />
-      <article className="content">
+      <article>
         <div className="container">
           <div className="row">
             <div className="column picture-column">

@@ -1,14 +1,36 @@
-import React from "react"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Layout, SEO } from "../components";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const NotFoundPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      gif: file(relativePath: { eq: "cat.gif" }) {
+        publicURL
+      }
+    }
+  `);
+  return (
+    <Layout>
+      <SEO title="404: Not found" />
+      <article
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1>
+          <strong>404 </strong> Page not found
+        </h1>
+        <p style={{ marginBottom: "5rem", textAlign: "center" }}>
+          You just hit a route that doesn&#39;t exist... the sadness. <br />
+          Hopefully this gif can cheer you up.
+        </p>
+        <img src={data.gif.publicURL} alt="cat shaq wiggle" width="400" />
+      </article>
+    </Layout>
+  );
+};
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
-
-export default NotFoundPage
+export default NotFoundPage;

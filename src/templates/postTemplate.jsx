@@ -7,7 +7,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={frontmatter.title} description={frontmatter.description} />
-      <article className="content">
+      <article>
         <i className="createdDate">{frontmatter.date}</i>
         <div
           className="blog-post-content"

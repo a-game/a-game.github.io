@@ -39,8 +39,8 @@ module.exports = {
         name: `Ahmad Game`,
         short_name: `Game`,
         start_url: `/`,
-        background_color: `#f5f5f6`,
-        theme_color: `#f5f5f6`,
+        background_color: `#f5f5f5`,
+        theme_color: `#3d3d3d`,
         display: `minimal-ui`,
         icon: `src/images/G-logo-round.svg`, // This path is relative to the root of the site.
       },
