@@ -1,7 +1,6 @@
 ---
 path: /blog/
 title: Hello World
-author: Ahmad Game
 description: A non-blog by Ahmad Game with thoughts on programming and other things I find interesting
 date: 2018-12-25
 ---

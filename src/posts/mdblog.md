@@ -2,7 +2,6 @@
 path: /blog/mdblog
 title: How I made this non-blog
 description: How to create a static website using Markdown and webpack.
-author: Ahmad Game
 date: 2018-12-25
 ---
 
