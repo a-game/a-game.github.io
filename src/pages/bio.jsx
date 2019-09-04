@@ -11,7 +11,7 @@ const BioPage = () => {
       game: file(relativePath: { eq: "Game.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
