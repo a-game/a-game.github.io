@@ -66,9 +66,12 @@ const XpPage = () => {
                 <h4>Co-Founder &nbsp;&mdash;&nbsp; Gamesome</h4>
                 <p>
                   Gamesome is a software consultant company with a long term
-                  plan to grow into developing our own products.
+                  goal to grow into developing our own products.
                 </p>
               </div>
+              <p>
+                <Link to="https://gamesome.io">Learn more...</Link>
+              </p>
             </div>
             <div className={style.row}>
               <div className={style.linePart}>
