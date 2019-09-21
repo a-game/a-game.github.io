@@ -1,5 +1,4 @@
 @import "../style/colors";
-@import "../style/fonts";
 
 .timeline {
   display: flex;
@@ -36,7 +35,7 @@
       .line {
         border-left: 2px solid $primary;
         height: 100%;
-        min-height: 6rem;
+        min-height: 4rem;
       }
     }
 
@@ -50,5 +49,85 @@
 }
 
 .project {
-  margin-bottom: 10rem;
+  padding: 5rem 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+.show-only-on-print {
+  display: none;
+}
+
+@media print {
+  body {
+    background: $white;
+
+    header {
+      display: none;
+    }
+
+    main {
+      padding: 0;
+
+      article {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .show-only-on-print {
+          padding-top: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          > img {
+            height: 6rem;
+          }
+          > .contact-info {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        section {
+          break-after: page;
+
+          &.usp-section {
+            display: none;
+          }
+
+          .hide-on-print {
+            display: none;
+          }
+
+          p {
+            break-inside: avoid-page;
+          }
+
+          > .project {
+            padding: 0;
+            break-after: page;
+          }
+
+          .timeline {
+            .row {
+              break-inside: avoid;
+
+              .line-part {
+                .date {
+                  background: transparent;
+                  color: $secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      display: none;
+    }
+  }
 }

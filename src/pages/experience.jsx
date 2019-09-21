@@ -3,13 +3,23 @@ import { Layout, SEO, Link, TagList } from "../components";
 import { MdMultilineChart, MdCode, MdSchool } from "react-icons/md";
 import { FaBaby } from "react-icons/fa";
 import style from "./experience.module.scss";
+import Logo from "../images/G-logo-round.svg";
 
 const XpPage = () => {
   return (
     <Layout>
       <SEO title="Experience" description="My Experience and resumé" />
       <article>
-        <section>
+        <div className={style.showOnlyOnPrint}>
+          <img src={Logo} alt="Game Logo" />
+          <div className={style.contactInfo}>
+            <span>Ahmad Game</span>
+            <span> ahmad@gamesome.io</span>
+            <span>+46 735 577 155</span>
+          </div>
+        </div>
+
+        <section className={style.uspSection}>
           <h2 className="text-center">What I do</h2>
           <div className="row">
             <div className="column">
@@ -54,7 +64,7 @@ const XpPage = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className={style.timelineSection}>
           <h2 className="text-center">Career summary</h2>
           <div className={style.timeline}>
             <div className={style.row}>
@@ -68,7 +78,7 @@ const XpPage = () => {
                   Gamesome is a software consultant company with a long term
                   goal to grow into developing our own products.
                 </p>
-                <p>
+                <p className={style.hideOnPrint}>
                   <Link to="https://gamesome.io">Learn more...</Link>
                 </p>
               </div>
@@ -93,9 +103,13 @@ const XpPage = () => {
                   space", that is something that I have to actively think about.
                 </p>
                 <p>
-                  During my time as a PM I worked with Lime products targeting
-                  sales and marketing market segments. This thought me quite a
-                  lot about those domains.
+                  As a PM I was responsible for the whole user journey. I worked
+                  with marketing in order to attract new customers through ads
+                  and relevant content. I worked with sales to maximize hit rate
+                  and conversion. I built product roadmaps and prioritized tasks
+                  together with the dev team. Finally I made sure that the users
+                  stayed happy together with customer success and a great
+                  support team.
                 </p>
               </div>
             </div>
@@ -183,8 +197,8 @@ const XpPage = () => {
             </div>
           </div>
         </section>
-        <section>
-          <h2 className="text-center">Experience</h2>
+        <section className={style.projectsSection}>
+          <h2 className="text-center">Projects I've worked on</h2>
           <div className={style.project}>
             <h3>Lime CRM add-ons</h3>
             <TagList
@@ -203,6 +217,7 @@ const XpPage = () => {
                 },
               ]}
             />
+            <h4>Development</h4>
             <p>
               Lime CRM is an interesting product, with a really bad name. It's
               not really a CRM at all. It's more like a platform for building
@@ -217,44 +232,38 @@ const XpPage = () => {
             </p>
             <p>
               The cool thing is that all of this stuff is extendable and
-              customizable. You can specify your own personal schema and object
-              names, which will then be available in the API, and so on. You
-              could even write your own custom API endpoint with your own
-              business logic and extend the web client using Web Components to
-              visualize and interact with the data in your own way.
+              customizable. You can specify your own schema and object models,
+              which will then be available everywhere. You could extend the API
+              with your own custom endpoints containing your custom business
+              logic. You could event customize user interaction by building
+              custom Web Components that visualize and interact with the data in
+              your own way.
             </p>
             <p>
-              Although this was not my main job at the time, I learned a lot by
-              testing and building small add-ons (which is a packaged
-              combination of the aforementioned customizations). Imagine
-              building a React app with the dev team in the room next door.{" "}
+              Because of my experience in development, I was an early tester of
+              these customization tools. The result was a couple of MVPS and one
+              shippable add-on (a packaged combination of the aforementioned
+              customizations). I learned a lot by being involved at such an
+              early stage. Imagine building a React app with the React core team
+              in the room next door.{" "}
               <span role="img" aria-label="smile">
                 😎
               </span>
             </p>
-          </div>
-          <div className={style.project}>
-            <h3>Product Management</h3>
-            <TagList
-              tags={[
-                { label: "Google Ads", url: "https://ads.google.com" },
-                { label: "Metabase", url: "https://metabase.com/" },
-                { label: "Segment", url: "https://segment.com/" },
-              ]}
-            />
+            <h4>Product Management</h4>
             <p>
-              As a product manager I was responsible for the whole user journey.
-              That often starts with a web search for some solution to their
-              current problem.
+              In October of 2018, Lime acquired a company called Netoptions, who
+              built tools for digital marketing. I was involved in this project
+              from the very beginning, helping out with the technical due
+              diligence and later managing the integration of these marketing
+              tools to Limes existing CRM systems.
             </p>
             <p>
-              Im my role I worked with the marketing department to to try to
-              attract as many web searches as possible to our product websites.
-              I worked with sales people to maximize conversion. I worked with
-              the development team to make sure the users got value for their
-              money. And I worked with support staff to make sure the users
-              stayed happy. All the while listening to feedback to tweak the
-              whole process.
+              Netoptions marketing tools were repackaged into add-ons, but due
+              to their complexity they warranted their own development team and
+              product management. The process of integrating the products was a
+              great learning experience, and it was extra fun to learn about a
+              new domain.
             </p>
           </div>
           <div className={style.project}>
@@ -279,6 +288,7 @@ const XpPage = () => {
                 { label: "Docker", url: "https://www.docker.com/" },
               ]}
             />
+            <h4>Development</h4>
             <p>
               Go was my first real experience with web development and working
               with SaaS. Go is a SPA built on modern web infrastructure with
@@ -286,13 +296,26 @@ const XpPage = () => {
               and a ES6 client.
             </p>
             <p>
-              The crux with this product was that it had a hefty amount of data,
-              that was to be made searchable and available to the user. Both
-              using the web client and the API for integrations. Storing
-              commonly used information in a quick search engine and lazy
-              loading more data on demand, in combination with a graphQL API
-              where you have to explicitly ask for the information you want is
-              great for this purpose.
+              Lime Go is sold with all of the nordic business contacts already
+              included in the product. This presented some cool challenges as we
+              had to think about separating the information already present in
+              the system from the data entered by the user to protect their
+              privacy. But at the same time merge the two data sets and make
+              them available for the user.
+            </p>
+            <h4>Product Management</h4>
+            <p>
+              I started managing Lime Go when the product was just coming out of
+              the introduction phase of it's life cycle and going in to the
+              growth phase. My primary focus was to maximize user acquisition
+              and minimize churn in order for the product to become self
+              sustaining and profitable.
+            </p>
+            <p>
+              The product and the brand had gotten some traction during the
+              introduction phase so my work was directed at product positioning
+              and make sure we had a product that delivers value to our
+              customers and stands out in a heavily competitive market.
             </p>
           </div>
           <div className={style.project}>
@@ -310,6 +333,7 @@ const XpPage = () => {
                 { label: ".NET", url: "https://dotnet.microsoft.com" },
               ]}
             />
+            <h4>Development</h4>
             <p>
               Easy is the first "real life" software product I've worked on so
               maybe it's not so surprising that it taught me the most.
@@ -339,6 +363,13 @@ const XpPage = () => {
               was one of the earliest attempts at cross platform,
               language-neutral communication between software programs. At it's
               essence it's quite an elegant way to have a self documenting API.
+            </p>
+            <h4>Product management</h4>
+            <p>
+              Contrary to Lime Go, I started managing Lime Easy at the end of
+              it's product life cycle. My key objectives were to keep users
+              happy enough to minimize churn while maximizing "positive churn"
+              by migrating customers to Limes other products.
             </p>
           </div>
         </section>
