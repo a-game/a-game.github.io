@@ -41,16 +41,11 @@ footer {
 }
 
 article {
-  padding: 10rem 1.5rem;
   margin: auto;
+  padding: 10rem 1.5rem;
+  width: 100%;
+  max-width: 55em;
   min-height: calc(100vh - (#{$header-height} + #{$footer-height}));
-
-  @media (min-width: $tablet) {
-    max-width: $tablet-container-width;
-  }
-  @media (min-width: $medium) {
-    max-width: $medium-container-width;
-  }
 }
 
 section:not(:last-child) {
