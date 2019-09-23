@@ -132,10 +132,22 @@ const XpPage = () => {
                 <p>
                   I joined Lime when the development department was still quite
                   small so I got a chance to work on all of their three CRM
-                  products. I later took lead on gracefully moving users from
-                  their oldest legacy product, Lime Easy, to the other two; Lime
-                  Go which is a Sales focused CRM system for smaller companies
-                  and Lime CRM which is Limes flagship platform.
+                  products though me to be versatile and to treat languages and
+                  code stacks as means to the end of solving user problems. I
+                  never really stopped being a developer during my time at Lime.
+                  Even tough my job title had changed, I always seamed to
+                  stumble upon occasions where programming was helpful if not
+                  necessary.
+                </p>
+                <p>
+                  As the company grew and I gained more experience, I started
+                  taking on different formal and informal engineering roles. To
+                  state a few examples: I worked as tech lead responsible for
+                  technical decisions. I had a brief period as team lead and
+                  manager. I filled the role of technical advisor during
+                  technical due diligence in the process of company
+                  acquisitions. Lastly I had the role of an architect designing
+                  how different pieces of software should work together.
                 </p>
               </div>
             </div>
