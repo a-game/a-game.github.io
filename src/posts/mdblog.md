@@ -238,7 +238,6 @@ module.exports = {
 Voilà, now you have a static website, build with Markdown
 
 I've compiled an MVP to create a static website using this method that you can [check out here.][11]
-For a slightly more advanced setup combining my original website and the newer Markdown parts you can check out the source code of this very website, [which is available here.][12]
 
 [1]: https://www.hanselman.com/
 [2]: https://daringfireball.net/projects/markdown/
@@ -251,5 +250,4 @@ For a slightly more advanced setup combining my original website and the newer M
 [9]: https://github.com/jantimon/html-webpack-plugin
 [10]: https://github.com/jantimon/html-webpack-plugin#options
 [11]: https://github.com/a-game/markdown-website
-[12]: https://github.com/a-game/a-game.github.io
 [13]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
