@@ -78,6 +78,14 @@ const XpPage = () => {
                   Gamesome is a software consultant company with a long term
                   goal to grow into developing our own products.
                 </p>
+                <p>
+                  At Gamesome I use my experience of building products to help
+                  other companies to realize their product ideas or to develop
+                  existing products in order to solve user pains. When I’m not
+                  helping customers I work on our own product ideas or just
+                  create some small project in order to learn and develop new
+                  skills.
+                </p>
                 <p className={style.hideOnPrint}>
                   <Link to="https://gamesome.io">Learn more...</Link>
                 </p>
@@ -91,16 +99,16 @@ const XpPage = () => {
               <div className={style.textPart}>
                 <h4>Product manager &nbsp;&mdash;&nbsp; Lime Technologies</h4>
                 <p>
-                  After working as developer for four years, I got offered a
-                  position as a product manager at Lime. That sounded like fun
-                  and I wanted to try it out. One big advantage to going from
-                  development to product is that it gave me a huge advantage
-                  when communicating with developers and consultants who deliver
-                  our products. It was also great when talking to technical
-                  customers, partners using our API:s and our tech support.
-                  However, It wasn't all good. One of the big challenges for me,
-                  was focusing on the "problem space" and not the "solution
-                  space", that is something that I have to actively think about.
+                  After working as developer for four years, I got a position as
+                  a product manager at Lime. That sounded like fun and I wanted
+                  to try it out. One big advantage to going from development to
+                  product is that it gave me a huge advantage when communicating
+                  with developers and consultants who deliver our products. It
+                  was also great when talking to technical customers, partners
+                  using our API:s and our tech support. However, It wasn't all
+                  good. One of the big challenges for me, was focusing on the
+                  "problem space" and not the "solution space", that is
+                  something that I have to actively think about.
                 </p>
                 <p>
                   As a PM I was responsible for the whole user journey. I worked
@@ -211,6 +219,89 @@ const XpPage = () => {
         </section>
         <section className={style.projectsSection}>
           <h2 className="text-center">Projects I've worked on</h2>
+          <div className={style.project}>
+            <h3>Bathroom Finder</h3>
+            <TagList
+              tags={[
+                { label: "Flutter", url: "https://flutter.dev/" },
+                { label: "Dart", url: "https://dart.dev/" },
+              ]}
+            />
+            <p>
+              When my daugther was born, I found my self going on a lot of long
+              walks in the rainy Swedish winter, and before i knew it I had to
+              change a diaper. But where can I do that?
+            </p>
+            <p>
+              I was faced with a problem that I didn't know I had. Being a
+              developer, my first thought was is there an app for that? The
+              answer was both yes and no. There were plenty of apps showing
+              where public bathrooms are, but none of them provided information
+              about the availability of a diaper changing table.
+            </p>
+            <p>So I built an app to solve that exact problem.</p>
+            <p>
+              Bathroom Finder is completely free and available for{" "}
+              <Link to="https://apps.apple.com/us/app/id1518954012">iOS</Link>{" "}
+              and{" "}
+              <Link to="https://play.google.com/store/apps/details?id=io.gamesome.bathroom_finder">
+                Android
+              </Link>
+              . Building this app solved a real life problem that I had and
+              provided a learning experience of developing and releasing a cross
+              platform app built with flutter.
+            </p>
+          </div>
+          <div className={style.project}>
+            <h3>E-Space Survey Manager</h3>
+            <TagList
+              tags={[
+                { label: "React", url: "https://reactjs.org/" },
+                { label: "GraphQL", url: "https://graphql.org/" },
+                { label: "Node.js", url: "https://nodejs.org/en/" },
+                { label: "Apollo", url: "https://www.apollographql.com/" },
+                { label: "Prisma", url: "https://www.prisma.io/" },
+                { label: "Docker", url: "https://www.docker.com/" },
+              ]}
+            />
+            <p>
+              E-Space is a company that offers online surveys for their
+              customers to engage with users in order to improve their websites,
+              products and services. E-Space helps their customers to design
+              engaging surveys, analyze the responses, present aggregated
+              results and suggest improvements. They use a proprietary tool
+              called “Survey Manager” to publish surveys, collect and analyse
+              responses.
+            </p>
+            <p>
+              In order to scale their business they wanted to make the Survey
+              Manager available for customers to publish their own surveys and
+              get an overview of the response data. Additionally they wanted to
+              help their customers make sense of the data and find insights into
+              their users behaviours. E-Space then relied on their own expertise
+              to provide deeper analysis and suggest improvements.
+            </p>
+            <p>
+              This presented a couple of interesting challenges, where I had to
+              use my entire toolkit from development, through UX design and
+              product management.
+            </p>
+            <p>
+              Firstly, the Survey Manager had to be visually and functionally
+              redesigned to cater to both the expert analysts at E-Space, and
+              newer less experienced users.
+            </p>
+            <p>
+              Secondly, we needed to automate and simplify some workflows
+              performed by the analysts that the new users expected to be able
+              to do themselves.
+            </p>
+            <p>
+              Finally, we had to rework pricing and marketing strategies where
+              license fees and expert services should complement each other to
+              provide a good customer experience.
+            </p>
+          </div>
           <div className={style.project}>
             <h3>Lime CRM add-ons</h3>
             <TagList

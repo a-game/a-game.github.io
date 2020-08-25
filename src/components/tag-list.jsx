@@ -15,5 +15,10 @@ const TagList = ({ tags }) => (
 export default TagList;
 
 TagList.propTypes = {
-  tags: PropTypes.arrayOf(PropTypes.object).isRequired,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      url: PropTypes.string,
+    })
+  ).isRequired,
 };
