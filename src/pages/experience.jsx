@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, SEO, Link, TagList } from "../components";
 import { MdMultilineChart, MdCode, MdSchool } from "react-icons/md";
 import { FaBaby } from "react-icons/fa";
-import style from "./experience.module.scss";
+import * as style from "./experience.module.scss";
 import Logo from "../images/G-logo-round.svg";
 
 const XpPage = () => {
@@ -64,7 +64,7 @@ const XpPage = () => {
             </div>
           </div>
         </section>
-        <section className={style.timelineSection}>
+        <section>
           <h2 className="text-center">Career summary</h2>
           <div className={style.timeline}>
             <div className={style.row}>
@@ -217,7 +217,7 @@ const XpPage = () => {
             </div>
           </div>
         </section>
-        <section className={style.projectsSection}>
+        <section>
           <h2 className="text-center">Projects I've worked on</h2>
           <div className={style.project}>
             <h3>Bathroom Finder</h3>

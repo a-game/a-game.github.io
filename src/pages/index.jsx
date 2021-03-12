@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import { Layout, SEO, Contact } from "../components";
-import style from "./index.module.scss";
+import * as style from "./index.module.scss";
 
 const IndexPage = props => {
   const data = useStaticQuery(graphql`

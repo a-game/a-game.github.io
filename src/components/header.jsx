@@ -2,7 +2,7 @@ import React from "react";
 
 import { ListLink, Link } from ".";
 import Logo from "../images/G-logo-round.svg";
-import style from "./header.module.scss";
+import * as style from "./header.module.scss";
 
 const Header = () => (
   <header>

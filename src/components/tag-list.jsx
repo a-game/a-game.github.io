@@ -1,6 +1,6 @@
 import React from "react";
 import { ListLink } from "./link";
-import style from "./tag-list.module.scss";
+import * as style from "./tag-list.module.scss";
 import PropTypes from "prop-types";
 
 const TagList = ({ tags }) => (
