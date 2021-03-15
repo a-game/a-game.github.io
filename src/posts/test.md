@@ -28,7 +28,7 @@ function someCode() {
 }
 ```
 
-```C#
+```cs
 public void CodeWithoutAFileName() {
     return true;
 }
