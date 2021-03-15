@@ -1,22 +1,9 @@
 import React from "react";
-import Img from "gatsby-image";
-import { useStaticQuery, graphql } from "gatsby";
-
+import { StaticImage } from "gatsby-plugin-image";
 import { Layout, SEO } from "../components";
 
 const BioPage = () => {
   const age = calculateAge();
-  const data = useStaticQuery(graphql`
-    query {
-      game: file(relativePath: { eq: "Game.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `);
   return (
     <Layout>
       <SEO title="Bio" />
@@ -24,9 +11,14 @@ const BioPage = () => {
         <div className="container">
           <div className="row">
             <div className="column picture-column">
-              <Img
+              <StaticImage
+                src="../images/Game.png"
+                alt="Profile picture"
+                width={400}
+                quality={99}
+                placeholder="tracedSVG"
+                layout="constrained"
                 className="picture"
-                fluid={data.game.childImageSharp.fluid}
               />
             </div>
             <div className="column">

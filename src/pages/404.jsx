@@ -1,15 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { Layout, SEO } from "../components";
+import catGIF from '../images/cat.gif';
 
 const NotFoundPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      gif: file(relativePath: { eq: "cat.gif" }) {
-        publicURL
-      }
-    }
-  `);
   return (
     <Layout>
       <SEO title="404: Not found" />
@@ -27,7 +20,7 @@ const NotFoundPage = () => {
           You just hit a route that doesn&#39;t exist... the sadness. <br />
           Hopefully this gif can cheer you up.
         </p>
-        <img src={data.gif.publicURL} alt="cat shaq wiggle" width="400" />
+        <img src={catGIF} alt="cat shaq wiggle" width="400" />
       </article>
     </Layout>
   );
