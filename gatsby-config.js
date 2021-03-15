@@ -28,7 +28,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-highlight.js`,
+            resolve: `gatsby-remark-prismjs`,
           },
         ],
       },
