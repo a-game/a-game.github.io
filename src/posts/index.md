@@ -21,3 +21,4 @@ Otherwise go check out the latest [xkcd](https://xkcd.com) or something.
 ## Table of content
 - [How this non-blog is made](/blog/mdblog)
 - [Game of life](/blog/game-of-life)
+- [Schelling's Segregation Model Simulation](/blog/schellings-model-sim)
