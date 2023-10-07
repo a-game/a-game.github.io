@@ -18,6 +18,7 @@ const urlPrefix = items[0].collection;
     {
       items.map(({ slug, data: { title, description, ...rest } }) => {
         const image = "image" in rest ? rest.image : undefined;
+        const date = "pubDate" in rest ? rest.pubDate : undefined;
         return (
           <Card
             cover={image && { image, alt: title }}
@@ -26,9 +27,21 @@ const urlPrefix = items[0].collection;
               ariaLabel: `Read more about ${title}`,
             }}
           >
-            <h3 class="mb-2 text-xl font-semibold" transition:name={slug}>
+            <h3
+              class="accent-text mb-2 text-xl font-semibold"
+              transition:name={slug}
+            >
               {title}
             </h3>
+            {date && (
+              <i class="text-sm">
+                {date.toLocaleDateString([], {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </i>
+            )}
             <p class="line-clamp-5">{description}</p>
           </Card>
         );
