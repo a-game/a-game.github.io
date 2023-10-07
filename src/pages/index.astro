@@ -4,8 +4,8 @@ import { emailHash } from "site";
 import Layout from "layouts/Page.astro";
 import Socials from "components/Socials.astro";
 import Hr from "components/Hr.astro";
-import Card from "components/Card.astro";
 import { getPosts } from "util/posts";
+import CardGrid from "components/CardGrid.astro";
 
 const projects = (
   await getCollection("projects", ({ data }) => Boolean(data.featured))
@@ -50,25 +50,7 @@ const copy = {
   {
     projects.length > 0 && (
       <>
-        <section>
-          <h2 class="mb-3 text-center text-3xl font-bold">{copy.projects}</h2>
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {projects.map(({ slug, data: { title, description, image } }) => (
-              <Card
-                cover={image && { image, alt: title }}
-                link={{
-                  href: `projects/${slug}`,
-                  ariaLabel: `Read more about ${title}`,
-                }}
-              >
-                <h3 class="mb-2 text-xl font-semibold" transition:name={slug}>
-                  {title}
-                </h3>
-                <p class="line-clamp-5">{description}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
+        <CardGrid items={projects} title={copy.projects} />
         <Hr />
       </>
     )
@@ -77,24 +59,7 @@ const copy = {
   {
     posts.length > 0 && (
       <>
-        <section>
-          <h2 class="mb-3 text-center text-3xl font-bold">{copy.posts}</h2>
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {posts.map(({ slug, data: { title, description } }) => (
-              <Card
-                link={{
-                  href: `posts/${slug}`,
-                  ariaLabel: "Read the full article",
-                }}
-              >
-                <h3 class="mb-2 text-xl font-semibold" transition:name={slug}>
-                  {title}
-                </h3>
-                <p class="line-clamp-5">{description}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
+        <CardGrid items={posts} title={copy.posts} />
         <Hr />
       </>
     )

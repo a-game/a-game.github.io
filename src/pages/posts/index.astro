@@ -1,0 +1,43 @@
+---
+import CardGrid from "components/CardGrid.astro";
+import Hr from "components/Hr.astro";
+import Link from "components/Link.astro";
+import Layout from "layouts/Page.astro";
+import { getPosts } from "util/posts";
+
+const latestPosts = await getPosts();
+---
+
+<Layout
+  title="Hello World!"
+  description="My first post on non-blog! How exciting!"
+>
+  <article>
+    <section>
+      <h1 class="accent-text">Hello World!</h1>
+      <p>Hope you're having a wonderful day :)</p>
+
+      <p>
+        The entire point of this "blog" is for me to be able to google my own
+        thoughts. In fact I will immediately stop calling it a blog, because
+        that might set some expectations on regular updates or maybe comments
+        and notifications.
+      </p>
+
+      <p>
+        I'm just going to try to write things that I've learned and want to
+        remember, or just stuff that I find interesting.
+        <br />
+         If you've found this and you're not me, well I hope you find some of
+        this stuff interesting too. Otherwise go check out the latest
+        <Link external href="https://xkcd.com/">xkcd</Link> or something.
+      </p>
+    </section>
+    {
+      latestPosts.length > 0 && (
+        <Hr />
+        <CardGrid items={latestPosts} title="Latest Posts" />
+      )
+    }
+  </article>
+</Layout>

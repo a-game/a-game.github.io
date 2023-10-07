@@ -1,14 +1,21 @@
 ---
-type Props = astroHTML.JSX.AnchorHTMLAttributes;
+type Props = astroHTML.JSX.AnchorHTMLAttributes & {
+  external?: boolean;
+};
 
-const { href = "#", class: cls, ...props } = Astro.props;
+const { href = "#", class: cls, external, ...props } = Astro.props;
+
+const target = external ? "_blank" : undefined;
+const rel = external ? "noopener noreferrer" : undefined;
 ---
 
 <a
   href={href}
+  target={target}
+  rel={rel}
   class:list={[
     "inline-block underline decoration-dashed underline-offset-4",
-    "hover:text-accent hover:underline-offset-8 transition-all",
+    "transition-all hover:text-accent hover:underline-offset-8",
     cls,
   ]}
   {...props}

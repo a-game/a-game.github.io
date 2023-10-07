@@ -2,7 +2,6 @@
 import Layout from "layouts/Markdown.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Hr from "components/Hr.astro";
-import { ROOT_SLUG } from "util/posts";
 
 type Props = {
   post: CollectionEntry<"posts">;
@@ -11,11 +10,8 @@ type Props = {
 export async function getStaticPaths() {
   const posts = await getCollection("posts", ({ data }) => !data.draft);
 
-  // In order for the index page to match the root path `/posts`
-  // we need to set it's slug to `undefined`
-  // and the template needs to have a rest parameter ([...slug]).
   return posts.map((post) => ({
-    params: { slug: post.slug === ROOT_SLUG ? undefined : post.slug },
+    params: { slug: post.slug },
     props: { post },
   }));
 }
