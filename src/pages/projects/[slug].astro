@@ -1,0 +1,37 @@
+---
+import Layout from "layouts/Markdown.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Hr from "components/Hr.astro";
+import Tags from "components/Tags.astro";
+
+type Props = {
+  project: CollectionEntry<"projects">;
+};
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { title, description, image, tech } = project.data;
+const ogImage = typeof image === "string" ? image : image?.src;
+
+const { Content } = await project.render();
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <section class="mb-3">
+    <h1 class="mb-4 accent-text leading-none" transition:name={project.slug}>{title}</h1>
+    <p class="my-4 text-sm italic">{description}</p>
+    {tech.length > 0 && <Tags class="not-prose" items={tech} />}
+  </section>
+  <Hr wave />
+  <section>
+    <Content />
+  </section>
+</Layout>

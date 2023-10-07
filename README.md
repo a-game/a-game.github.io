@@ -1,16 +1,8 @@
-# a-game.github.io
-My private website built with no runtime dependencies.
+# ahmadgame.com
+My personal website, built with [Astro](https://astro.build).
 
-I tried to keep it as simple as possible using pure ES6 features for DOM manipulation like progress bars and smooth scrolling.
-I do however use sass because it's a pain in the butt to duplicate styles.
-Finally webpack is used for building the static output pages.
+## Note
 
+svgo 2.8.0 is not actually used by this repo, however it is used by astro-icon and the build fails unless it has that exact version [according to this](https://github.com/natemoo-re/astro-icon/pull/76)
 
-### Deploy:
-npm run build
-cd public/
-git init
-git add -A
-git commit -m "Publish - $(date +"%T")"
-git push -u https://<TOKEN>@github.com/a-game/a-game.github.io.git master -f
-rm -rf .git
+Remove it once astro-icon is updated.

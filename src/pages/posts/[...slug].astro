@@ -1,0 +1,58 @@
+---
+import Layout from "layouts/Markdown.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import Hr from "components/Hr.astro";
+import { ROOT_SLUG } from "util/posts";
+
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts", ({ data }) => !data.draft);
+
+  // In order for the index page to match the root path `/posts`
+  // we need to set it's slug to `undefined`
+  // and the template needs to have a rest parameter ([...slug]).
+  return posts.map((post) => ({
+    params: { slug: post.slug === ROOT_SLUG ? undefined : post.slug },
+    props: { post },
+  }));
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+const { title, description, pubDate, author, canonical } = post.data;
+
+const imgSlug = slug ? `/posts/${slug}.png` : "/posts.png";
+const ogImage = new URL(imgSlug, Astro.url.origin).href;
+const formattedDate = pubDate.toLocaleDateString([], {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const { Content } = await post.render();
+---
+
+<Layout
+  title={title}
+  description={description}
+  author={author}
+  canonical={canonical}
+  ogImage={ogImage}
+>
+  <section>
+    <h1 class="accent-text mb-2" transition:name={post.slug}>{title}</h1>
+    <div>
+      <span class="sr-only">Posted on:</span>
+      <time class="m-0 text-sm italic" datetime={pubDate.toLocaleString()}>
+        {formattedDate}
+      </time>
+    </div>
+  </section>
+  <Hr wave />
+  <section>
+    <Content />
+  </section>
+</Layout>

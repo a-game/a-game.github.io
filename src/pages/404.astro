@@ -1,0 +1,28 @@
+---
+import { title } from "site";
+import Layout from "layouts/Page.astro";
+import Link from "components/Link.astro";
+import Icon from "astro-icon";
+
+const copy = {
+  title: `404 Not Found | ${title}`,
+  h1: 404,
+  ascii: "¯\\_(ツ)_/¯",
+  description: "Page Not Found",
+  back: "Go back",
+};
+---
+
+<Layout title={title}>
+  <section class="flex flex-col items-center justify-center">
+    <h1 aria-label="404 Not Found" class="text-9xl font-bold accent-text">
+      {copy.h1}
+    </h1>
+    <span aria-hidden="true">{copy.ascii}</span>
+    <p class="mt-4 text-2xl sm:text-3xl">{copy.description}</p>
+    <Link href="/" class="my-6 text-lg underline-offset-8">
+      <Icon name="tabler:arrow-left" class="-ml-8 mr-2 inline-block h-6 w-6" />
+      <span>{copy.back}</span>
+    </Link>
+  </section>
+</Layout>

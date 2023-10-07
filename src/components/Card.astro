@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from "astro";
+import Icon from "astro-icon";
+import { Image } from "astro:assets";
+import Link from "./Link.astro";
+
+type Props = {
+  cover?: { image: ImageMetadata; alt: string };
+  link?: {
+    href: string;
+    label?: string;
+    ariaLabel?: string;
+  };
+};
+
+const { cover, link } = Astro.props;
+
+const copy = { readMore: "Read more" };
+---
+
+<div class:list={["flex flex-col rounded-lg shadow-xl"]}>
+  {cover && <Image src={cover.image} alt={cover.alt} />}
+
+  <div class="flex flex-1 flex-col p-6">
+    <slot />
+    {
+      link && (
+        <div class="mt-auto">
+          <Link href={link.href} aria-label={link.ariaLabel}>
+            <span>{link.label || copy.readMore}</span>
+            <Icon
+              name="tabler:arrow-right"
+              class="-mr-8 ml-2 inline-block h-6 w-6"
+            />
+          </Link>
+        </div>
+      )
+    }
+  </div>
+</div>

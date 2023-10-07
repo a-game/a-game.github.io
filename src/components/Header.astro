@@ -1,0 +1,62 @@
+---
+import { title } from "site";
+import Button from "./Button.astro";
+import Hr from "./Hr.astro";
+import Icon from "astro-icon";
+import { getPosts } from "util/posts";
+
+type NavItem = { path: string; name: string };
+const items: NavItem[] = [];
+
+const posts = await getPosts({ unsorted: true });
+if (posts.length > 0) {
+  items.push({ path: "/posts", name: "Posts" });
+}
+
+const { pathname } = Astro.url;
+---
+
+<header class="w-full">
+  <nav class="flex items-center justify-between py-6">
+    <div
+      class="absolute -top-full left-0 right-0 z-50 flex justify-center transition-all focus-within:top-8"
+    >
+      <a href="#main-content">Skip to content</a>
+    </div>
+    <a
+      href="/"
+      aria-label="home"
+      class="flex shrink-0 items-center justify-center gap-6"
+    >
+      <Icon name="logo" class="h-12 w-12" />
+      <span class="hidden font-medium sm:block">{title}</span>
+    </a>
+
+    <ul class="flex gap-8 align-middle">
+      {
+        items.map(({ path, name }) => (
+          <li>
+            <a
+              href={path}
+              class:list={[
+                "font-medium hover:text-accent",
+                {
+                  "underline decoration-wavy decoration-2 underline-offset-8":
+                    path === pathname,
+                },
+              ]}
+            >
+              {name}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <Button id="theme-btn">
+          <Icon name="sun-moon" class="h-6 w-6 transition-all hover:rotate-6" />
+        </Button>
+      </li>
+    </ul>
+  </nav>
+  <Hr />
+</header>

@@ -1,0 +1,102 @@
+---
+import { getCollection } from "astro:content";
+import { emailHash } from "site";
+import Layout from "layouts/Page.astro";
+import Socials from "components/Socials.astro";
+import Hr from "components/Hr.astro";
+import Card from "components/Card.astro";
+import { getPosts } from "util/posts";
+
+const projects = (
+  await getCollection("projects", ({ data }) => Boolean(data.featured))
+).sort((a, b) => Number(a.data.featured) - Number(b.data.featured));
+
+const posts = await getPosts({ onlyFeatured: true });
+
+const copy = {
+  h1: ["Hi!", "I'm Game"],
+  intro: [
+    `A software engineer, product owner, and a father, with over a decade of
+     experience of building products and leading teams.`,
+    `Over the years I've workd with various companies, from small startups to
+     large corporations, which exposed me to a variety of solutions and tech
+     stacks.`,
+  ],
+  projects: "Notable Projects",
+  posts: "Recent Posts",
+};
+---
+
+<Layout>
+  <section>
+    <div class="mb-16 flex items-center gap-16">
+      <img
+        class="h-28 w-28 rounded-full sm:h-48 sm:w-48"
+        src=`https://www.gravatar.com/avatar/${emailHash()}?s=400`
+        alt="Ahmad Game"
+      />
+      <h1 class="text-4xl font-bold sm:text-5xl">
+        <span class="accent-text">{copy.h1[0]}</span>
+        <br />
+        <span>{copy.h1[1]}</span>
+      </h1>
+    </div>
+    {copy.intro.map((p) => <p>{p}</p>)}
+    <Socials />
+  </section>
+
+  <Hr />
+
+  {
+    projects.length > 0 && (
+      <>
+        <section>
+          <h2 class="mb-3 text-center text-3xl font-bold">{copy.projects}</h2>
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {projects.map(({ slug, data: { title, description, image } }) => (
+              <Card
+                cover={image && { image, alt: title }}
+                link={{
+                  href: `projects/${slug}`,
+                  ariaLabel: `Read more about ${title}`,
+                }}
+              >
+                <h3 class="mb-2 text-xl font-semibold" transition:name={slug}>
+                  {title}
+                </h3>
+                <p class="line-clamp-5">{description}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+        <Hr />
+      </>
+    )
+  }
+
+  {
+    posts.length > 0 && (
+      <>
+        <section>
+          <h2 class="mb-3 text-center text-3xl font-bold">{copy.posts}</h2>
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {posts.map(({ slug, data: { title, description } }) => (
+              <Card
+                link={{
+                  href: `posts/${slug}`,
+                  ariaLabel: "Read the full article",
+                }}
+              >
+                <h3 class="mb-2 text-xl font-semibold" transition:name={slug}>
+                  {title}
+                </h3>
+                <p class="line-clamp-5">{description}</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+        <Hr />
+      </>
+    )
+  }
+</Layout>
