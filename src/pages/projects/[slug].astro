@@ -24,9 +24,11 @@ const ogImage = typeof image === "string" ? image : image?.src;
 const { Content } = await project.render();
 ---
 
-<Layout title={title} description={description} ogImage={ogImage}>
+<Layout title={title} description={description} ogImage={ogImage} article>
   <section class="mb-3">
-    <h1 class="mb-4 accent-text leading-none" transition:name={project.slug}>{title}</h1>
+    <h1 class="accent-text mb-4 leading-none" transition:name={project.slug}>
+      {title}
+    </h1>
     <p class="my-4 text-sm italic">{description}</p>
     {tech.length > 0 && <Tags class="not-prose" items={tech} />}
   </section>
