@@ -45,9 +45,10 @@ const ogImageURL = new URL(ogImage ?? "og.jpg", Astro.url.origin).href;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content={SITE.title} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonical} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
