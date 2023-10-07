@@ -1,0 +1,5 @@
+<svg id="visual" viewBox="0 0 1248 52" width="1248" height="52"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <path d="M0 42L16 41.5C32 41 64 40 96 37.8C128 35.7 160 32.3 192 32.3C224 32.3 256 35.7 288 37.7C320 39.7 352 40.3 384 39.7C416 39 448 37 480 35.7C512 34.3 544 33.7 576 34C608 34.3 640 35.7 672 37.2C704 38.7 736 40.3 768 40.7C800 41 832 40 864 39.3C896 38.7 928 38.3 960 36.7C992 35 1024 32 1056 32.8C1088 33.7 1120 38.3 1152 39.5C1184 40.7 1216 38.3 1232 37.2L1248 36" fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="currentColor" stroke-width="6"></path>
+</svg>

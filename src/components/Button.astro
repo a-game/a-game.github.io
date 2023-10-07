@@ -1,0 +1,19 @@
+---
+type Props = astroHTML.JSX.ButtonHTMLAttributes;
+
+const { type = "button", disabled = false, ...props }: Props = Astro.props;
+
+if (disabled) {
+  props.tabindex = -1;
+}
+---
+
+<button
+  class:list={["p-1 hover:text-accent", { "cursor-not-allowed": disabled }]}
+  type={type}
+  disabled={disabled}
+  aria-disabled={Boolean(disabled)}
+  {...props}
+>
+  <slot />
+</button>

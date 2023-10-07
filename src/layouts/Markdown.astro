@@ -1,0 +1,10 @@
+---
+import Layout, { type Props as LayoutProps } from "layouts/Page.astro";
+type Props = LayoutProps;
+---
+
+<Layout {...Astro.props}>
+  <article>
+    <slot />
+  </article>
+</Layout>

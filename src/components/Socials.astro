@@ -1,0 +1,41 @@
+---
+import { author, email } from "site";
+import Link from "./Link.astro";
+import Icon from "astro-icon";
+
+export interface Props {
+  centered?: boolean;
+}
+
+const { centered = false } = Astro.props;
+const socials = [
+  {
+    name: "Github",
+    href: "https://github.com/a-game",
+    linkTitle: `${author} on Github`,
+    icon: "tabler:brand-github",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/ahmadgame/",
+    linkTitle: `${author} on LinkedIn`,
+    icon: "tabler:brand-linkedin",
+  },
+  {
+    name: "Mail",
+    href: `mailto:${email}`,
+    linkTitle: `Send an email to ${author}`,
+    icon: "tabler:mail",
+  },
+];
+---
+
+<div class:list={["flex flex-wrap gap-4", { "justify-center": centered }]}>
+  {
+    socials.map(({ icon, href, linkTitle }) => (
+      <Link href={href} title={linkTitle}>
+        <Icon name={icon} class="h-6 w-6 hover:rotate-6" />
+      </Link>
+    ))
+  }
+</div>

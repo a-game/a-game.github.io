@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex min-h-screen flex-col font-body px-4;
+    @apply bg-primary-lighter text-primary-darker selection:bg-accent-light;
+    @apply dark:bg-primary-darker dark:text-primary-lighter dark:selection:bg-accent-dark;
+  }
+
+  main,
+  header,
+  footer {
+    @apply container mx-auto;
+  }
+
+  article {
+    @apply prose mx-auto dark:prose-invert prose-slate;
+  }
+
+  section {
+    @apply my-16;
+  }
+
+  button,
+  a {
+    @apply outline-2 outline-offset-4 outline-accent focus-visible:outline-dashed;
+  }
+
+  a {
+    @apply focus-visible:no-underline;
+  }
+
+  p {
+    @apply my-5;
+  }
+
+  /* ===== scrollbar ===== */
+  html {
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-2 w-2 rounded-full;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-primary;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply cursor-grab bg-primary-light;
+  }
+}
+
+@layer utilities {
+  .accent-text {
+    @apply text-accent selection:text-accent-dark dark:selection:text-accent-light;
+  }
+}
