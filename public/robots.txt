@@ -1,7 +1,5 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
 Allow: /
+Disallow: /posts/test
 
 Sitemap: https://ahmadgame.com/sitemap-index.xml

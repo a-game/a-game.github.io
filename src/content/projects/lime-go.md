@@ -14,8 +14,6 @@ tech:
   - PostgreSQL
 ---
 
-![Lime Go - search and filter companies](images/go1.png)
-
 Lime Go is an innovative CRM application renowned for seamlessly integrating comprehensive Nordic company data and essential decision-maker information. This distinctive offering comes complete with potent search and filtering tools, empowering users to navigate the wealth of data at their fingertips.
 My introduction to web development and SaaS occurred through Lime Go, a Single Page Application (SPA) built on cutting edge (for the time) web infrastructure, featuring microservices in Docker containers, ASP.NET Core, and ES6.
 

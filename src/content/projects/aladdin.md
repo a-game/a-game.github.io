@@ -2,7 +2,7 @@
 title: Aladdin
 description: A comprehensive desk and room booking solution involving hardware, software in a globally distributed team.
 featured: 1
-image: images/logi1.webp
+image: images/aladdin.png
 tech:
   - Kinesis
   - Lambda
