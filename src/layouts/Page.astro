@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import * as SITE from "site";
 import Header from "components/Header.astro";
 import "../base.css";
@@ -24,6 +24,8 @@ const {
 } = Astro.props;
 
 const ogImageURL = new URL(ogImage ?? "og.jpg", Astro.url.origin).href;
+const fontUrl =
+  "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap";
 ---
 
 <!doctype html>
@@ -56,11 +58,10 @@ const ogImageURL = new URL(ogImage ?? "og.jpg", Astro.url.origin).href;
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <ViewTransitions />
+    <link rel="preload" as="style" href={fontUrl} />
+    <link href={fontUrl} rel="stylesheet" />
+
+    <ClientRouter />
     <script is:inline src="/toggle-theme.js"></script>
   </head>
 

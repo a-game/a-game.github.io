@@ -12,7 +12,7 @@ tech:
   - Express
 ---
 
-Have you ever wondered, where match statistics like assists, shots on goal and offide count come from? 
+Have you ever wondered, where match statistics like assists, shots on goal and offide count come from?
 
 Well, there are people sitting in the audience, watching the game and repoting these stats to a central system. The problem is that there are several different systems and humans make mistakes, so the stats reported by different people can differ quite a lot.
 
