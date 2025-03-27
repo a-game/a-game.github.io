@@ -17,6 +17,5 @@ module.exports = {
         // "astro/no-set-html-directive": "error"
       },
     },
-    // ...
   ],
 };

@@ -7,6 +7,7 @@
     @apply flex min-h-screen flex-col font-body px-4;
     @apply bg-primary-lighter text-primary-darker selection:bg-accent-light;
     @apply dark:bg-primary-darker dark:text-primary-lighter dark:selection:bg-accent-dark;
+    @apply transition-colors;
   }
 
   main,
