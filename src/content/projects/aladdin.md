@@ -22,8 +22,6 @@ tech:
   - Konva
 ---
 
-## Overview
-
 In the autumn of 2021, Logitech aimed to harness its market position as a leading provider of video conferencing equipment and desk peripherals to create a comprehensive desk and room booking solution, code named “Aladdin”.
 The project spanned numerous cross-functional teams, multiple departments, and various time zones. It entailed a comprehensive approach involving both hardware and software initiatives.
 
