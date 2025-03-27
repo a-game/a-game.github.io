@@ -16,12 +16,8 @@ function toggle() {
     document.documentElement.classList.remove("dark");
   }
 
-  document
-    .querySelector("#theme-btn")
-    ?.setAttribute(
-      "aria-label",
-      `toggle ${theme === "dark" ? "light" : "dark"} theme"}`
-    );
+  const label = `Toggle ${theme === "dark" ? "light" : "dark"} theme`;
+  document.querySelector("#theme-btn")?.setAttribute("aria-label", label);
 }
 
 function set() {

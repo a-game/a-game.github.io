@@ -1,5 +1,5 @@
 ---
-import Layout from "layouts/Markdown.astro";
+import Markdown from "layouts/Markdown.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import Hr from "components/Hr.astro";
 import Tags from "components/Tags.astro";
@@ -24,7 +24,7 @@ const ogImage = typeof image === "string" ? image : image?.src;
 const { Content } = await project.render();
 ---
 
-<Layout title={title} description={description} ogImage={ogImage} article>
+<Markdown title={title} description={description} ogImage={ogImage} article>
   <section class="mb-3">
     <h1 class="accent-text mb-4 leading-none" transition:name={project.slug}>
       {title}
@@ -36,4 +36,4 @@ const { Content } = await project.render();
   <section>
     <Content />
   </section>
-</Layout>
+</Markdown>

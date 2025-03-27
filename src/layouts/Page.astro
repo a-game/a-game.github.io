@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import * as SITE from "site";
 import Header from "components/Header.astro";
 import "../base.css";
@@ -61,7 +61,7 @@ const fontUrl =
     <link rel="preload" as="style" href={fontUrl} />
     <link href={fontUrl} rel="stylesheet" />
 
-    <ViewTransitions />
+    <ClientRouter />
     <script is:inline src="/toggle-theme.js"></script>
   </head>
 

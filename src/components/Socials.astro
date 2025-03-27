@@ -1,7 +1,7 @@
 ---
 import { author, email } from "site";
 import Link from "./Link.astro";
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   centered?: boolean;
@@ -32,9 +32,9 @@ const socials = [
 
 <div class:list={["flex flex-wrap gap-4", { "justify-center": centered }]}>
   {
-    socials.map(({ icon, href, linkTitle }) => (
+    socials.map(({ name, icon, href, linkTitle }) => (
       <Link href={href} title={linkTitle}>
-        <Icon name={icon} class="h-6 w-6 hover:rotate-6" />
+        <Icon name={icon} class="h-6 w-6 hover:rotate-6" title={name} />
       </Link>
     ))
   }
